@@ -109,7 +109,7 @@ if (isset($_SESSION['login_popup']) && $_SESSION['login_popup'] === true) {
             color: #444;
         }
 
-        <style>.nav-right .btn-logout {
+        .nav-right .btn-logout {
             padding: 8px 15px;
             background: #4C6EF5;
             color: white;
