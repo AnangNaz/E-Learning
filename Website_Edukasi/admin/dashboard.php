@@ -9,18 +9,27 @@ if(isset($_COOKIE['tutor_id'])){
    header('location:login.php');
 }
 
-$select_contents = $conn->prepare("SELECT * FROM `content` WHERE tutor_id = ?");
+// Ambil data profile untuk "welcome"
+$select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
+$select_profile->execute([$tutor_id]);
+$fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+
+// Hitung total materi (content)
+$select_contents = $conn->prepare("SELECT * FROM `materi` WHERE tutor_id = ?");
 $select_contents->execute([$tutor_id]);
 $total_contents = $select_contents->rowCount();
 
-$select_playlists = $conn->prepare("SELECT * FROM `playlist` WHERE tutor_id = ?");
-$select_playlists->execute([$tutor_id]);
-$total_playlists = $select_playlists->rowCount();
+// Hitung total mapel
+$select_mapel = $conn->prepare("SELECT * FROM `mapel` WHERE tutor_id = ?");
+$select_mapel->execute([$tutor_id]);
+$total_mapel = $select_mapel->rowCount();
 
+// likes (jika tidak dipakai, tetap biarkan)
 $select_likes = $conn->prepare("SELECT * FROM `likes` WHERE tutor_id = ?");
 $select_likes->execute([$tutor_id]);
 $total_likes = $select_likes->rowCount();
 
+// komentar
 $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE tutor_id = ?");
 $select_comments->execute([$tutor_id]);
 $total_comments = $select_comments->rowCount();
@@ -35,10 +44,7 @@ $total_comments = $select_comments->rowCount();
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Dashboard</title>
 
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="../css/styleadmin.css">
 </head>
 <body>
@@ -47,53 +53,42 @@ $total_comments = $select_comments->rowCount();
    
 <section class="dashboard">
 
-   <h1 class="heading">dashboard</h1>
+   <h1 class="heading">Dashboard</h1>
 
    <div class="box-container">
 
       <div class="box">
-         <h3>welcome!</h3>
+         <h3>Welcome!</h3>
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="profile.php" class="btn">view profile</a>
+         <a href="profile.php" class="btn">View profile</a>
       </div>
 
       <div class="box">
          <h3><?= $total_contents; ?></h3>
-         <p>total contents</p>
-         <a href="add_content.php" class="btn">add new content</a>
+         <p>Total Materi</p>
+         <a href="tambah_materi.php" class="btn">Tambah Materi</a>
       </div>
 
       <div class="box">
-         <h3><?= $total_playlists; ?></h3>
-         <p>total playlists</p>
-         <a href="add_playlist.php" class="btn">add new playlist</a>
+         <h3><?= $total_mapel; ?></h3>
+         <p>Total Mata Pelajaran</p>
+         <a href="tambah_mapel.php" class="btn">Tambah kerajaan</a>
       </div>
 
       <div class="box">
          <h3><?= $total_likes; ?></h3>
-         <p>total likes</p>
-         <a href="contents.php" class="btn">view contents</a>
+         <p>Total Likes</p>
+         <a href="mapel.php" class="btn">Lihat kerajaan</a>
       </div>
 
       <div class="box">
          <h3><?= $total_comments; ?></h3>
-         <p>total comments</p>
-         <a href="comments.php" class="btn">view comments</a>
+         <p>Total Komentar</p>
+         <a href="komentar.php" class="btn">Lihat Komentar</a>
       </div>
-
-      <div class="box">
-         <h3>quick select</h3>
-         <p>login or register</p>
-         <div class="flex-btn">
-            <a href="login.php" class="option-btn">login</a>
-            <a href="register.php" class="option-btn">register</a>
-         </div>
-      </div>
-
    </div>
 
 </section>
-
 
 <?php include '../components/footer.php'; ?>
 

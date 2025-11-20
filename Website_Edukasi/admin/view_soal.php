@@ -7,17 +7,19 @@ if (!isset($_COOKIE['tutor_id'])) {
 
 $tutor_id = $_COOKIE['tutor_id'];
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['id']) && !isset($_GET['get_id'])) {
     echo "ID soal tidak ditemukan!";
     exit;
 }
 
-$soal_id = $_GET['id'];
+$soal_id = $_GET['id'] ?? $_GET['get_id'];
+
+
 
 $query = $conn->prepare("
-    SELECT soal.*, content.title AS video_title 
+    SELECT soal.*, materi.title AS materi_title 
     FROM soal
-    LEFT JOIN content ON soal.content_id = content.id
+    LEFT JOIN materi ON soal.content_id = materi.id
     WHERE soal.id = ? AND soal.tutor_id = ?
     LIMIT 1
 ");
@@ -30,14 +32,12 @@ if ($query->rowCount() == 0) {
 
 $data = $query->fetch(PDO::FETCH_ASSOC);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>View Soal</title>
-     <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styleadmin.css">
 </head>
 <body>
@@ -50,7 +50,8 @@ $data = $query->fetch(PDO::FETCH_ASSOC);
 
 <div class="box">
     <h3><?= $data['question']; ?></h3>
-    <p><b>Video terkait:</b> <?= $data['video_title']; ?></p>
+
+    <p><b>Materi terkait:</b> <?= $data['materi_title']; ?></p>
 
     <div class="options">
         <p>A. <?= $data['option_a']; ?></p>
@@ -62,7 +63,7 @@ $data = $query->fetch(PDO::FETCH_ASSOC);
     <p><b>Jawaban Benar:</b> <?= strtoupper($data['correct_option']); ?></p>
 
     <br>
-    <a href="contents.php" class="btn">kembali</a>
+    <a href="materi.php" class="btn">kembali</a>
 </div>
 
 </section>

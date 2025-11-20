@@ -4,49 +4,48 @@ include '../components/connect.php';
 
 if(!isset($_COOKIE['tutor_id'])){
    header('location:login.php');
+   exit;
 }
 
+$tutor_id = $_COOKIE['tutor_id'];
+
 if(!isset($_GET['id'])){
-   header('location:contents.php');
+   header('location:materi.php');
+   exit;
 }
 
 $id = $_GET['id'];
 
-$materi = $conn->prepare("SELECT * FROM materi WHERE id=? LIMIT 1");
+$materi = $conn->prepare("SELECT * FROM materi WHERE id = ? LIMIT 1");
 $materi->execute([$id]);
 
 if($materi->rowCount() == 0){
-   header('location:contents.php');
+   header('location:materi.php');
+   exit;
 }
 
 $data = $materi->fetch(PDO::FETCH_ASSOC);
 
-/* UPDATE DATA */
-if(isset($_POST['update'])){
+/* ===============================
+      PROSES UPDATE
+================================*/
+if(isset($_POST['submit'])){
 
-   $title = $_POST['title'];
-   $desc  = $_POST['description'];
+   $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+   $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
+   $isi_materi = $_POST['materi']; // longtext, jangan disanitasi ketat agar format tetap
 
-   $update = $conn->prepare("UPDATE materi SET title=?, description=? WHERE id=?");
-   $update->execute([$title, $desc, $id]);
+   $update = $conn->prepare("
+      UPDATE materi SET 
+         title = ?, 
+         description = ?, 
+         materi = ?
+      WHERE id = ?
+   ");
 
-   // File baru
-   if(!empty($_FILES['file']['name'])){
-      $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-      $rename = 'materi_'.time().'.'.$ext;
+   $update->execute([$title, $description, $isi_materi, $id]);
 
-      move_uploaded_file($_FILES['file']['tmp_name'], "../uploaded_files/".$rename);
-
-      // Hapus file lama
-      if(file_exists("../uploaded_files/".$data['file'])){
-         unlink("../uploaded_files/".$data['file']);
-      }
-
-      $update_file = $conn->prepare("UPDATE materi SET file=? WHERE id=?");
-      $update_file->execute([$rename, $id]);
-   }
-
-   $success = "Materi berhasil diperbarui!";
+   $message[] = 'Materi berhasil diperbarui!';
 }
 
 ?>
@@ -56,37 +55,43 @@ if(isset($_POST['update'])){
 <head>
    <meta charset="UTF-8">
    <title>Update Materi</title>
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    <link rel="stylesheet" href="../css/styleadmin.css">
 </head>
 <body>
 
 <?php include '../components/admin_header.php'; ?>
-<section class="playlist-form">
 
-   <h1 class="heading">Update Materi</h1>
+<section class="form-container">
 
-   <form action="" method="post" enctype="multipart/form-data">
-      <?php if(isset($success)): ?>
-         <p class="success"><?= $success; ?></p>
-      <?php endif; ?>
+   <form action="" method="post">
+      <h3>Update Materi</h3>
 
-      <p>Judul Materi</p>
-      <input type="text" name="title" class="box" value="<?= $data['title']; ?>" required>
+      <?php 
+      if(isset($message)){
+         foreach($message as $msg){
+            echo '<p class="message">'.$msg.'</p>';
+         }
+      }
+      ?>
 
-      <p>Deskripsi</p>
-      <textarea name="description" class="box" rows="5" required><?= $data['description']; ?></textarea>
+      <p>Judul Materi <span>*</span></p>
+      <input type="text" name="title" class="box" required value="<?= $data['title']; ?>">
 
-      <p>File Materi (PDF/DOC) - opsional</p>
-      <input type="file" name="file" class="box">
+      <p>Deskripsi <span>*</span></p>
+      <textarea name="description" class="box" rows="4" required><?= $data['description']; ?></textarea>
 
-      <input type="submit" name="update" value="Update Materi" class="btn">
+      <p>Isi Materi (Teks Panjang) <span>*</span></p>
+      <textarea name="materi" class="box" rows="15" required><?= $data['materi']; ?></textarea>
+
+      <input type="submit" name="submit" value="Update Materi" class="btn">
    </form>
 
 </section>
 
-
 <?php include '../components/footer.php'; ?>
 <script src="../js/admin_script.js"></script>
+
 </body>
 </html>
