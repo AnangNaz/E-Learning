@@ -16,7 +16,7 @@
         <a href="#">Home</a>
         <a href="#">Peta</a>
         <a href="#">Daftar Kerajaan</a>
-        <a href="#">Tentang</a>
+        <a href="/tentang">Tentang</a>
     </nav>
 </header>
 
@@ -45,9 +45,24 @@
 </section>
 
 <!-- Footer -->
-<footer>
-    <p>&copy; <?= date('Y') ?> Sejarah Kerajaan Nusantara. All rights reserved.</p>
+<footer class="royal-footer">
+    <div class="footer-border"></div>
+
+    <div class="footer-content">
+        <h3>Sejarah Kerajaan Nusantara</h3>
+        <p>Menelusuri kejayaan kerajaan-kerajaan yang membentuk Indonesia modern.</p>
+
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/kerajaan">Daftar Kerajaan</a>
+            <a href="/tentang">Tentang</a>
+            <a href="/peta">Peta Kerajaan</a>
+        </div>
+
+        <p class="copy">© <?= date('Y') ?> Nusantara Heritage • All Rights Reserved</p>
+    </div>
 </footer>
+
 
 <!-- JS Inline -->
 <script>
