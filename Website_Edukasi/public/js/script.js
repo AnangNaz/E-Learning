@@ -70,3 +70,36 @@ toggleBtn.onclick = (e) =>{
       disableDarkMode();
    }
 }
+
+function filterCards() {
+    let input = document.getElementById('search');
+    let filter = input.value.toLowerCase();
+    let container = document.getElementById('cardContainer');
+    let cards = container.getElementsByClassName('card');
+
+    for(let i=0; i<cards.length; i++){
+        let text = cards[i].innerText.toLowerCase();
+        if(text.indexOf(filter) > -1){
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+// Fade-in on scroll
+function fadeInOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    const windowBottom = window.innerHeight;
+
+    elements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowBottom - 50) { // tampil saat 50px dari bawah
+            el.classList.add('visible');
+        }
+    });
+}
+
+// Jalankan saat scroll dan saat halaman load
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll);
+
