@@ -2,14 +2,11 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-<<<<<<< HEAD
-=======
 /**
  * @var RouteCollection $routes
  */
 
 // Halaman utama
->>>>>>> 30f009ee730c0ea0e99a7ee3216cf03ee4724b75
 $routes->get('/', 'Kerajaan::index');
 
 // Group Admin
