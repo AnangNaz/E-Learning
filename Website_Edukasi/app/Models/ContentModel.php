@@ -9,8 +9,9 @@ class ContentModel extends Model
     protected $table      = 'content';
     protected $primaryKey = 'id';
 
-    protected $allowedFields = [
-        'tutor_id', 'title', 'description', 'thumb', 'video',
-        'date', 'status'
+protected $allowedFields = [
+   'id','tutor_id','playlist_id','title','description',
+        'video','thumb','status'
     ];
+
 }

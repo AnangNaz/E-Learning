@@ -1,70 +1,28 @@
-<?php
-
-include '../components/connect.php';
-
-if(!isset($_COOKIE['tutor_id'])){
-   header('location:login.php');
-}
-
-$tutor_id = $_COOKIE['tutor_id'];
-
-if(isset($_POST['submit'])){
-   
-   $materi_id = $_POST['materi_id'];
-   $question = $_POST['question'];
-   $option_a = $_POST['option_a'];
-   $option_b = $_POST['option_b'];
-   $option_c = $_POST['option_c'];
-   $option_d = $_POST['option_d'];
-   $correct = $_POST['correct'];
-
-   $insert = $conn->prepare("
-      INSERT INTO soal (tutor_id, content_id, question, option_a, option_b, option_c, option_d, correct_option)
-      VALUES (?,?,?,?,?,?,?,?)
-   ");
-
-   $insert->execute([
-      $tutor_id,
-      $materi_id,
-      $question,
-      $option_a,
-      $option_b,
-      $option_c,
-      $option_d,
-      $correct
-   ]);
-
-   $message[] = 'Soal berhasil ditambahkan!';
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
    <meta charset="UTF-8">
-   <title>Add Soal</title>
+   <title>Tambah Soal</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-   <link rel="stylesheet" href="../css/styleadmin.css">
+   <link rel="stylesheet" href="<?= base_url('css/styleadmin.css'); ?>">
 </head>
 <body>
 
-<?php include '../components/admin_header.php'; ?>
+<?= view('admin/components/admin_header', ['profile' => $profile]); ?>
 
 <section class="form-container">
 
-<form method="post">
+<form action="<?= base_url('admin/tambah-soal/simpan'); ?>" method="post">
+
    <h3>Tambah Soal</h3>
 
-   <p>Pilih Materi</p>
-   <select name="materi_id" class="box">
-      <?php
-         $videos = $conn->prepare("SELECT * FROM materi WHERE tutor_id=?");
-         $videos->execute([$tutor_id]);
-         while($row = $videos->fetch(PDO::FETCH_ASSOC)){
-            echo '<option value="'.$row['id'].'">'.$row['title'].'</option>';
-         }
-      ?>
+   <p>Pilih Materi (Video)</p>
+   <select name="materi_id" class="box" required>
+      <?php foreach ($materi as $row): ?>
+         <option value="<?= $row['id']; ?>">
+            <?= esc($row['title']); ?>
+         </option>
+      <?php endforeach; ?>
    </select>
 
    <p>Pertanyaan</p>
@@ -84,13 +42,13 @@ if(isset($_POST['submit'])){
       <option value="D">D</option>
    </select>
 
-   <input type="submit" name="submit" value="Tambah Soal" class="btn">
+   <input type="submit" value="Tambah Soal" class="btn">
+
 </form>
 
 </section>
 
-<?php include '../components/footer.php'; ?>
-<script src="../js/admin_script.js"></script>
+<script src="<?= base_url('js/admin_script.js'); ?>"></script>
 
 </body>
 </html>

@@ -53,31 +53,31 @@ class Materi extends BaseController
     /* ============================================================
        DELETE VIDEO
     ============================================================ */
-    public function deleteVideo($id)
-    {
-        $contentModel = new ContentModel();
-        $video = $contentModel->find($id);
+public function deleteVideo()
+{
+    $id = $this->request->getPost('video_id');
 
-        if ($video) {
+    $contentModel = new ContentModel();
+    $video = $contentModel->find($id);
 
-            // Hapus thumbnail
-            if (!empty($video['thumb'])) {
-                $path = FCPATH . 'uploaded_files/' . $video['thumb'];
-                if (file_exists($path)) unlink($path);
-            }
+    if ($video) {
 
-            // Hapus file video
-            if (!empty($video['video'])) {
-                $path = FCPATH . 'uploaded_files/' . $video['video'];
-                if (file_exists($path)) unlink($path);
-            }
-
-            // Hapus content
-            $contentModel->delete($id);
+        if (!empty($video['thumb'])) {
+            $path = FCPATH . 'uploaded_files/' . $video['thumb'];
+            if (file_exists($path)) unlink($path);
         }
 
-        return redirect()->back()->with('success', 'Video berhasil dihapus!');
+        if (!empty($video['video'])) {
+            $path = FCPATH . 'uploaded_files/' . $video['video'];
+            if (file_exists($path)) unlink($path);
+        }
+
+        $contentModel->delete($id);
     }
+
+    return redirect()->to('/admin/materi')->with('success', 'Video berhasil dihapus!');
+}
+
 
     /* ============================================================
        DELETE MATERI
@@ -105,11 +105,18 @@ public function deleteMateri()
     /* ============================================================
        DELETE SOAL
     ============================================================ */
-    public function deleteSoal($id)
-    {
-        $soalModel = new SoalModel();
-        $soalModel->delete($id);
+public function deleteSoal()
+{
+    $soalModel = new SoalModel();
+    $id = $this->request->getPost('id'); // gunakan 'id', sesuai input hidden
 
+    if ($id) {
+        $soalModel->delete($id);
         return redirect()->back()->with('success', 'Soal berhasil dihapus!');
     }
+
+    return redirect()->back()->with('error', 'Soal tidak ditemukan!');
+}
+
+
 }

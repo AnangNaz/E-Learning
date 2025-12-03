@@ -11,7 +11,7 @@
 
 <body>
 
-<?= $this->include('admin/components/admin_header') ?>
+<?= view('admin/components/admin_header', ['profile' => $profile]); ?>
 
 <section class="dashboard">
 
