@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 // Halaman utama
 $routes->get('/', 'Kerajaan::index');
+<<<<<<< HEAD
 
 // Group Admin
 $routes->group('admin', function($routes) {
@@ -102,3 +103,9 @@ $routes->get('/logout', 'Login::logout');
 
 // Halaman Tentang
 $routes->get('/tentang', 'TentangController::index');
+=======
+$routes->get('/tentang', 'TentangController::index');
+$routes->get('kerajaan/detail/(:segment)', 'Kerajaan::detail/$1');
+$routes->get('/kerajaan', 'DaftarKerajaan::index');
+$routes->get('/peta', 'PetaController::index');
+>>>>>>> 684e35de4a2f7620aac44922cf74963bc80a9cc4

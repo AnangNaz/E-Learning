@@ -12,4 +12,16 @@ class Kerajaan extends BaseController
 
         return view('kerajaan/index', $data);
     }
+
+    public function detail($id)
+    {
+        $model = new KerajaanModel();
+        $data['kerajaan'] = $model->find($id);
+
+        if (!$data['kerajaan']) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Data kerajaan tidak ditemukan");
+        }
+
+        return view('kerajaan/detail', $data);
+    }
 }
