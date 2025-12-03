@@ -2453,16 +2453,969 @@ in SYSTEMPATH\Router\Router.php on line 741.
  6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-11-21 15:27:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "tentang/index.php"
-[Method: GET, Route: tentang]
+ERROR - 2025-11-21 10:05:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-11-21 10:05:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-11-21 10:05:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-11-21 10:05:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-11-21 10:06:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-11-21 10:06:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-11-21 10:08:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-11-21 10:08:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-21 10:50:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-11-21 10:50:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-11-21 10:57:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-11-21 10:57:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:14:21 --> PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+[Method: GET, Route: dashboard]
+in ROOTPATH\components\connect.php on line 7.
+ 1 ROOTPATH\components\connect.php(7): PDO->__construct('mysql:host=localhost;dbname=course_db', 'root', Object(SensitiveParameterValue))
+ 2 APPPATH\Views\admin\dashboard.php(3): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\components\\connect.php')
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(11): view('admin/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:45:11 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:05 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:07 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:07 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:07 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:08 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:47:08 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 40.
+ 1 APPPATH\Views\admin\components\admin_header.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 40)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_header', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(11): view('admin/components/admin_header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:51:22 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 3.
+ 1 APPPATH\Views\admin\dashboard.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 3)
+ 2 APPPATH\Views\admin\dashboard.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(23): view('admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:52:17 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 12.
+ 1 APPPATH\Views\admin\dashboard.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 12)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(23): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:54:52 --> ErrorException: include(../E-Learning/Website_Edukasi/app/Views/admin/components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 3.
+ 1 APPPATH\Views\admin\dashboard.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../E-Learning/Website_Edukasi/app/Views/admin/components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 3)
+ 2 APPPATH\Views\admin\dashboard.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(23): view('admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:55:13 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 11.
+ 1 APPPATH\Views\admin\dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(23): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 11:56:35 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 2.
+ 1 APPPATH\Views\admin\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 2)
+ 2 APPPATH\Views\admin\dashboard.php(2): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(23): view('admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:01:07 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 2.
+ 1 APPPATH\Views\admin\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 2)
+ 2 APPPATH\Views\admin\dashboard.php(2): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(25): view('admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:01:09 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 2.
+ 1 APPPATH\Views\admin\dashboard.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 2)
+ 2 APPPATH\Views\admin\dashboard.php(2): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 6 APPPATH\Controllers\admin\dashboard.php(25): view('admin/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:01:53 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 13.
+ 1 APPPATH\Views\admin\dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 13)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(25): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:15:34 --> ErrorException: Undefined array key "image"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 28.
+ 1 APPPATH\Views\admin\components\admin_header.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/components/admin_header', null, true)
+ 5 APPPATH\Views\admin\dashboard.php(14): CodeIgniter\View\View->include('admin/components/admin_header')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:18:08 --> ErrorException: Undefined array key "profession"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 30.
+ 1 APPPATH\Views\admin\components\admin_header.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "profession"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 30)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/components/admin_header', null, true)
+ 5 APPPATH\Views\admin\dashboard.php(14): CodeIgniter\View\View->include('admin/components/admin_header')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:19:11 --> ErrorException: Undefined array key "image"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 63.
+ 1 APPPATH\Views\admin\components\admin_header.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/components/admin_header', null, true)
+ 5 APPPATH\Views\admin\dashboard.php(14): CodeIgniter\View\View->include('admin/components/admin_header')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:19:18 --> ErrorException: Undefined array key "image"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 63.
+ 1 APPPATH\Views\admin\components\admin_header.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 63)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/components/admin_header', null, true)
+ 5 APPPATH\Views\admin\dashboard.php(14): CodeIgniter\View\View->include('admin/components/admin_header')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:20:21 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\components\admin_header.php on line 65.
+ 1 APPPATH\Views\admin\components\admin_header.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php', 65)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\components\\admin_header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin/components/admin_header', null, true)
+ 5 APPPATH\Views\admin\dashboard.php(14): CodeIgniter\View\View->include('admin/components/admin_header')
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 9 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:26:54 --> ErrorException: Undefined variable $fetch_profile
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 24.
+ 1 APPPATH\Views\admin\dashboard.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fetch_profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 24)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:28:22 --> ErrorException: Undefined variable $total_likes
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 42.
+ 1 APPPATH\Views\admin\dashboard.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_likes', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:28:23 --> ErrorException: Undefined variable $total_likes
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 42.
+ 1 APPPATH\Views\admin\dashboard.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_likes', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 12:29:06 --> ErrorException: Undefined variable $total_likes
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\dashboard.php on line 42.
+ 1 APPPATH\Views\admin\dashboard.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_likes', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\admin\dashboard.php(26): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:04:28 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/mapel]
+in APPPATH\Views\admin\mapel.php on line 3.
+ 1 APPPATH\Views\admin\mapel.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php', 3)
+ 2 APPPATH\Views\admin\mapel.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 6 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:10:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layout.php"
+[Method: GET, Route: admin/mapel]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tentang/index.php')
- 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('tentang/index', [], true)
- 3 APPPATH\Controllers\tentang.php(9): view('tentang/index')
- 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tentang->index()
- 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tentang))
- 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layout.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('admin/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 4 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:13:51 --> ErrorException: include(C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Views/components/admin_header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/mapel]
+in APPPATH\Views\admin\mapel.php on line 13.
+ 1 APPPATH\Views\admin\mapel.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views/components/admin_header.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php', 13)
+ 2 APPPATH\Views\admin\mapel.php(13): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 6 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:14:15 --> ErrorException: include(C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Views/components/footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/mapel]
+in APPPATH\Views\admin\mapel.php on line 77.
+ 1 APPPATH\Views\admin\mapel.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views/components/footer.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php', 77)
+ 2 APPPATH\Views\admin\mapel.php(77): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 6 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:14:18 --> ErrorException: include(C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Views/components/footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/mapel]
+in APPPATH\Views\admin\mapel.php on line 77.
+ 1 APPPATH\Views\admin\mapel.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views/components/footer.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php', 77)
+ 2 APPPATH\Views\admin\mapel.php(77): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 6 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:18:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/footer', [], true)
+ 3 APPPATH\Views\admin\mapel.php(77): view('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 7 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:18:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/footer', [], true)
+ 3 APPPATH\Views\admin\mapel.php(77): view('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 7 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:18:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/footer', [], true)
+ 3 APPPATH\Views\admin\mapel.php(77): view('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 7 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:26:03 --> ErrorException: Undefined array key "image"
+[Method: GET, Route: admin/mapel]
+in APPPATH\Views\admin\mapel.php on line 20.
+ 1 APPPATH\Views\admin\mapel.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "image"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php', 20)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\mapel.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/mapel', [], true)
+ 5 APPPATH\Controllers\Admin\Mapel.php(29): view('admin/mapel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Mapel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Mapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:40:28 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 3.
+ 1 APPPATH\Views\admin\materi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 3)
+ 2 APPPATH\Views\admin\materi.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 6 APPPATH\Controllers\Admin\Materi.php(29): view('admin/materi', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 14:50:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/footer', [], true)
+ 3 APPPATH\Views\admin\materi.php(129): view('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 7 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-11-21 15:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 15:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-21 16:56:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/admin_header.php"
+[Method: GET, Route: admin/tambah-mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/admin_header.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('components/admin_header', null, true)
+ 3 APPPATH\Views\admin\tambah_mapel.php(15): CodeIgniter\View\View->include('components/admin_header')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_mapel', [], true)
+ 7 APPPATH\Controllers\Admin\TambahMapel.php(17): view('admin/tambah_mapel')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahMapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-11-21 16:57:05 --> ErrorException: Undefined variable $profile
+[Method: GET, Route: admin/tambah-mapel]
+in APPPATH\Views\admin\tambah_mapel.php on line 15.
+ 1 APPPATH\Views\admin\tambah_mapel.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_mapel.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_mapel.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_mapel', [], true)
+ 5 APPPATH\Controllers\Admin\TambahMapel.php(17): view('admin/tambah_mapel')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahMapel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahMapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-11-21 16:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-21 16:59:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/tambah-mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('components/footer', null, true)
+ 3 APPPATH\Views\admin\tambah_mapel.php(72): CodeIgniter\View\View->include('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_mapel', [], true)
+ 7 APPPATH\Controllers\Admin\TambahMapel.php(21): view('admin/tambah_mapel', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahMapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-11-21 16:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-21 16:59:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/tambah-mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('components/footer', null, true)
+ 3 APPPATH\Views\admin\tambah_mapel.php(72): CodeIgniter\View\View->include('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_mapel.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_mapel', [], true)
+ 7 APPPATH\Controllers\Admin\TambahMapel.php(21): view('admin/tambah_mapel', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahMapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-11-21 16:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 16:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-21 16:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

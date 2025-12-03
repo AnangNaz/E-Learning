@@ -1,252 +1,700 @@
-CRITICAL - 2025-12-03 05:41:31 --> ErrorException: Undefined array key "foto_raja"
+ERROR - 2025-12-03 03:11:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-03 03:11:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
 [Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 32.
- 1 APPPATH\Views\kerajaan\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_raja"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 32)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-ERROR - 2025-12-03 05:44:30 --> mysqli_sql_exception: Table 'course_db.kerajaan' doesn't exist in C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
-Stack trace:
-#0 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
-#1 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
-#2 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
-#3 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
-#4 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
-#5 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
-#6 C:\xampp3\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
-#7 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
-#8 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
-#9 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
-#11 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-#12 C:\xampp3\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-#13 C:\xampp3\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp3\\htdoc...')
-#14 {main}
-CRITICAL - 2025-12-03 05:44:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.kerajaan' doesn't exist
-[Method: GET, Route: /]
-in SYSTEMPATH\Database\BaseConnection.php on line 684.
- 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `kerajaan`
-WHERE `status` = :status:', [...], false)
- 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
- 4 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
- 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:44:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.kerajaan' doesn't exist
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
-FROM `kerajaan`
-WHERE `status` = \'active\'')
- 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
-FROM `kerajaan`
-WHERE `status` = \'active\'')
- 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `kerajaan`
-WHERE `status` = :status:', [...], false)
- 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
- 6 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
- 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 03:32:14 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 3.
+ 1 APPPATH\Views\admin\tambah_soal.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 3)
+ 2 APPPATH\Views\admin\tambah_soal.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 6 APPPATH\Controllers\Admin\TambahSoal.php(22): view('admin/tambah_soal', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
  9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:44:30 --> [Caused by] mysqli_sql_exception: Table 'course_db.kerajaan' doesn't exist
-in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
-FROM `kerajaan`
-WHERE `status` = \'active\'', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
-FROM `kerajaan`
-WHERE `status` = \'active\'')
- 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
-FROM `kerajaan`
-WHERE `status` = \'active\'')
- 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
-FROM `kerajaan`
-WHERE `status` = :status:', [...], false)
- 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
- 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
- 7 APPPATH\Controllers\Kerajaan.php(11): CodeIgniter\BaseModel->findAll()
- 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 03:32:38 --> ErrorException: include(../components/admin_header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 52.
+ 1 APPPATH\Views\admin\tambah_soal.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/admin_header.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 52)
+ 2 APPPATH\Views\admin\tambah_soal.php(52): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 6 APPPATH\Controllers\Admin\TambahSoal.php(22): view('admin/tambah_soal', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 03:33:09 --> ErrorException: Undefined variable $profile
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 52.
+ 1 APPPATH\Views\admin\tambah_soal.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 52)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 5 APPPATH\Controllers\Admin\TambahSoal.php(22): view('admin/tambah_soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 03:37:15 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 64.
+ 1 APPPATH\Views\admin\tambah_soal.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 5 APPPATH\Controllers\Admin\TambahSoal.php(29): view('admin/tambah_soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 03:37:19 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 64.
+ 1 APPPATH\Views\admin\tambah_soal.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 5 APPPATH\Controllers\Admin\TambahSoal.php(29): view('admin/tambah_soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 03:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 03:52:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "footer.php"
+[Method: GET, Route: admin/tambah-video]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('footer.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('footer', null, true)
+ 3 APPPATH\Views\admin\tambah_video.php(59): CodeIgniter\View\View->include('footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_video.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_video', [], true)
+ 7 APPPATH\Controllers\Admin\TambahVideo.php(31): view('admin/tambah_video', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahVideo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahVideo))
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:45:34 --> ErrorException: Undefined array key "foto_raja"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 32.
- 1 APPPATH\Views\kerajaan\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_raja"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 32)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 03:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 03:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 03:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 04:11:55 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "Admin\UpdateVideo"
+[Method: GET, Route: Admin%5CUpdateVideo]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('Admin\\UpdateVideo')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('Admin\\UpdateVideo')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 04:13:38 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "Admin\UpdateVideo"
+[Method: GET, Route: Admin%5CUpdateVideo]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('Admin\\UpdateVideo')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('Admin\\UpdateVideo')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 04:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 04:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 04:49:12 --> ErrorException: Undefined variable $video
+[Method: GET, Route: admin/tambah-materi]
+in APPPATH\Views\admin\tambah_materi.php on line 23.
+ 1 APPPATH\Views\admin\tambah_materi.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $video', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_materi.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_materi.php')
  3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_materi', [], true)
+ 5 APPPATH\Controllers\Admin\TambahMateri.php(30): view('admin/tambah_materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahMateri->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahMateri))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:47:51 --> ErrorException: Undefined array key "foto_raja"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 32.
- 1 APPPATH\Views\kerajaan\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_raja"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 32)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 04:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 05:06:02 --> ErrorException: Undefined array key "id_video"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 61.
+ 1 APPPATH\Views\admin\materi.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_video"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 61)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
  3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:50:56 --> ErrorException: Undefined array key "nama_kerajaan"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 42.
- 1 APPPATH\Views\kerajaan\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kerajaan"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 42)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 05:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 05:06:20 --> ErrorException: Undefined array key "id_video"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 61.
+ 1 APPPATH\Views\admin\materi.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_video"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 61)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
  3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:53:33 --> ErrorException: Undefined array key "nama_kerajaan"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 42.
- 1 APPPATH\Views\kerajaan\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kerajaan"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 42)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 05:06:59 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 61.
+ 1 APPPATH\Views\admin\materi.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 61)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
  3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:54:42 --> ErrorException: Undefined array key "nama_kerajaan"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 42.
- 1 APPPATH\Views\kerajaan\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kerajaan"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 42)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 05:54:43 --> ErrorException: Undefined array key "nama_kerajaan"
-[Method: GET, Route: /]
-in APPPATH\Views\kerajaan\index.php on line 42.
- 1 APPPATH\Views\kerajaan\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kerajaan"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php', 42)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\index.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/index', [], true)
- 5 APPPATH\Controllers\Kerajaan.php(13): view('kerajaan/index', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 14:29:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "daftar_kerajaan.php"
-[Method: GET, Route: kerajaan]
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 05:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 05:38:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin_header.php"
+[Method: GET, Route: admin/tambah-video]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('daftar_kerajaan.php')
- 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('daftar_kerajaan', [], true)
- 3 APPPATH\Controllers\DaftarKerajaan.php(17): view('daftar_kerajaan', [...])
- 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarKerajaan->index()
- 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarKerajaan))
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin_header.php')
+ 2 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('admin_header', null, true)
+ 3 APPPATH\Views\admin\tambah_video.php(12): CodeIgniter\View\View->include('admin_header')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_video.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_video', [], true)
+ 7 APPPATH\Controllers\Admin\TambahVideo.php(24): view('admin/tambah_video', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahVideo->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahVideo))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 05:39:56 --> ErrorException: Undefined variable $profile
+[Method: GET, Route: admin/tambah-video]
+in APPPATH\Views\admin\tambah_video.php on line 12.
+ 1 APPPATH\Views\admin\tambah_video.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_video.php', 12)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_video.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_video', [], true)
+ 5 APPPATH\Controllers\Admin\TambahVideo.php(24): view('admin/tambah_video', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahVideo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahVideo))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 05:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 05:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:44:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 06:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 06:59:01 --> ErrorException: Undefined variable $conn
+[Method: GET, Route: admin/tambah-soal]
+in APPPATH\Views\admin\tambah_soal.php on line 64.
+ 1 APPPATH\Views\admin\tambah_soal.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $conn', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php', 64)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 5 APPPATH\Controllers\Admin\TambahSoal.php(29): view('admin/tambah_soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 07:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 07:09:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "components/footer.php"
+[Method: GET, Route: admin/tambah-soal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('components/footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/footer', [], true)
+ 3 APPPATH\Views\admin\tambah_soal.php(48): view('components/footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\tambah_soal.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/tambah_soal', [], true)
+ 7 APPPATH\Controllers\Admin\TambahSoal.php(29): view('admin/tambah_soal', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\TambahSoal->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TambahSoal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 07:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 07:19:55 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 07:20:15 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 07:22:37 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 07:22:52 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 07:23:10 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 07:23:33 --> ErrorException: Undefined array key "video_id"
+[Method: GET, Route: admin/materi]
+in APPPATH\Views\admin\materi.php on line 129.
+ 1 APPPATH\Views\admin\materi.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "video_id"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php', 129)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\materi.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/materi', [], true)
+ 5 APPPATH\Controllers\Admin\Materi.php(50): view('admin/materi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 07:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 07:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 08:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 09:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 09:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 11:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 12:33:02 --> ErrorException: include(../components/connect.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/update-soal/6]
+in APPPATH\Views\admin\update_soal.php on line 3.
+ 1 APPPATH\Views\admin\update_soal.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../components/connect.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update_soal.php', 3)
+ 2 APPPATH\Views\admin\update_soal.php(3): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update_soal.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update_soal', [], true)
+ 6 APPPATH\Controllers\Admin\UpdateSoal.php(54): view('admin/update_soal', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\UpdateSoal->index('6')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UpdateSoal))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 12:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 12:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:26:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 13:28:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "login.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Login.php(22): view('login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
  6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 14:30:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "daftarKerajaan.php"
-[Method: GET, Route: kerajaan]
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 13:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 13:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 14:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 14:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 14:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 14:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 16:28:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('daftarKerajaan.php')
- 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('daftarKerajaan', [], true)
- 3 APPPATH\Controllers\DaftarKerajaan.php(17): view('daftarKerajaan', [...])
- 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarKerajaan->index()
- 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarKerajaan))
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
  6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 14:33:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "daftarKerajaan.php"
-[Method: GET, Route: kerajaan]
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:32:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('daftarKerajaan.php')
- 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('daftarKerajaan', [], true)
- 3 APPPATH\Controllers\DaftarKerajaan.php(17): view('daftarKerajaan', [...])
- 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DaftarKerajaan->index()
- 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarKerajaan))
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
  6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 15:59:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "petaKerajaan.php"
-[Method: GET, Route: peta]
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:32:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petaKerajaan.php')
- 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('petaKerajaan', [], true)
- 3 APPPATH\Controllers\PetaController.php(13): view('petaKerajaan', [...])
- 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PetaController->index()
- 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetaController))
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
  6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
-CRITICAL - 2025-12-03 16:18:22 --> ErrorException: Undefined variable $k
-[Method: GET, Route: peta]
-in APPPATH\Views\kerajaan\PetaKerajaan.php on line 119.
- 1 APPPATH\Views\kerajaan\PetaKerajaan.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $k', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\PetaKerajaan.php', 119)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\PetaKerajaan.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/petaKerajaan', [], true)
- 5 APPPATH\Controllers\PetaController.php(13): view('kerajaan/petaKerajaan', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PetaController->index()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetaController))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:32:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:32:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:33:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:33:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:33:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 16:34:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/create.php"
+[Method: GET, Route: admin/raja/create/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/create.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/create', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(70): view('admin/raja/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->create('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 16:35:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 16:36:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/index.php"
+[Method: GET, Route: admin/mapel/Ba0w9QsokUse0PsITHth/raja]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/index', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(45): view('admin/raja/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->index('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 16:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 16:43:48 --> TypeError: CodeIgniter\Database\BaseBuilder::setBind(): Argument #1 ($key) must be of type string, int given, called in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php on line 1575
+[Method: POST, Route: admin/raja/store/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3529.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1575): CodeIgniter\Database\BaseBuilder->setBind(0, '2025-12-03 16:43:48', true)
+ 2 SYSTEMPATH\Model.php(365): CodeIgniter\Database\BaseBuilder->set([...], '2025-12-03 16:43:48', true)
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin\Raja.php(112): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->store('Ba0w9QsokUse0PsITHth')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
 CRITICAL - 2025-12-03 17:53:53 --> ErrorException: Undefined array key "judul"
 [Method: GET, Route: kerajaan/detail/8]
@@ -263,3 +711,31 @@ in APPPATH\Views\kerajaan\detail.php on line 142.
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+=======
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 16:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-03 16:49:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/raja/index.php"
+[Method: GET, Route: admin/mapel/Ba0w9QsokUse0PsITHth/raja]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/raja/index.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/raja/index', [], true)
+ 3 APPPATH\Controllers\Admin\Raja.php(49): view('admin/raja/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Raja->index('Ba0w9QsokUse0PsITHth')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Raja))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-03 16:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 16:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 17:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 17:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 17:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 17:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-03 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 30f009ee730c0ea0e99a7ee3216cf03ee4724b75
