@@ -248,3 +248,18 @@ in APPPATH\Views\kerajaan\PetaKerajaan.php on line 119.
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-03 17:53:53 --> ErrorException: Undefined array key "judul"
+[Method: GET, Route: kerajaan/detail/8]
+in APPPATH\Views\kerajaan\detail.php on line 142.
+ 1 APPPATH\Views\kerajaan\detail.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "judul"', 'C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\detail.php', 142)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\kerajaan\\detail.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('kerajaan/detail', [], true)
+ 5 APPPATH\Controllers\Kerajaan.php(35): view('kerajaan/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('8')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp3\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')

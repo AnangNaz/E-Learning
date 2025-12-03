@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\KerajaanModel;
+use App\Models\PeristiwaModel;
 
 class Kerajaan extends BaseController
 {
@@ -15,12 +17,21 @@ class Kerajaan extends BaseController
 
     public function detail($id)
     {
-        $model = new KerajaanModel();
-        $data['kerajaan'] = $model->find($id);
+        $kerajaanModel = new KerajaanModel();
+        $peristiwaModel = new PeristiwaModel();
+
+        // Ambil data kerajaan
+        $data['kerajaan'] = $kerajaanModel->find($id);
 
         if (!$data['kerajaan']) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Data kerajaan tidak ditemukan");
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
+
+        // Ambil peristiwa yang terkait
+        $data['peristiwa'] = $peristiwaModel
+            ->where('kerajaan_id', $id)
+            ->orderBy('tahun', 'ASC')
+            ->findAll();
 
         return view('kerajaan/detail', $data);
     }
