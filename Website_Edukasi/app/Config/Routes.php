@@ -10,7 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Kerajaan::index');
 
 // Group Admin
-$routes->group('admin', function($routes) {
+$routes->group('admin', function ($routes) {
 
     // Dashboard & halaman utama admin
     $routes->get('dashboard', 'Admin\Dashboard::index');
@@ -30,7 +30,7 @@ $routes->group('admin', function($routes) {
     $routes->get('view-materi/(:num)', 'Admin\ViewMateri::index/$1');
 
     // ===== TAMBAHKAN ROUTES UNTUK VIEW VIDEO =====
-   
+
     $routes->get('view-video/(:any)', 'Admin\ViewVideo::index/$1');
     $routes->post('video/delete', 'Admin\ViewVideo::deleteVideo');
     $routes->post('video/delete-comment', 'Admin\ViewVideo::deleteComment');
@@ -78,20 +78,22 @@ $routes->group('admin', function($routes) {
 
     $routes->get('soal/view/(:num)', 'Admin\ViewSoal::index/$1');
     $routes->get('view-soal/(:num)', 'Admin\ViewSoal::index/$1');
-// Routes untuk raja
-$routes->get('mapel/(:any)/raja', 'Admin\Raja::index/$1');
-$routes->get('raja/create/(:any)', 'Admin\Raja::create/$1');
-$routes->post('raja/store/(:any)', 'Admin\Raja::store/$1');
-$routes->get('raja/edit/(:num)', 'Admin\Raja::edit/$1');
-$routes->post('raja/update/(:num)', 'Admin\Raja::update/$1');
-$routes->get('raja/delete/(:num)', 'Admin\Raja::delete/$1');
+    // Routes untuk raja
+    $routes->get('mapel/(:any)/raja', 'Admin\Raja::index/$1');
+    $routes->get('raja/create/(:any)', 'Admin\Raja::create/$1');
+    $routes->post('raja/store/(:any)', 'Admin\Raja::store/$1');
+    $routes->get('raja/edit/(:num)', 'Admin\Raja::edit/$1');
+    $routes->post('raja/update/(:num)', 'Admin\Raja::update/$1');
+    $routes->get('raja/delete/(:num)', 'Admin\Raja::delete/$1');
     // Login routes
-$routes->get('/login', 'Login::index');
-$routes->post('/login/process', 'Login::process');
-$routes->get('/logout', 'Login::logout');
+    $routes->get('/login', 'Login::index');
+    $routes->post('/login/process', 'Login::process');
+    $routes->get('/logout', 'Login::logout');
 
+    $routes->get('tambah-peristiwa', 'Peristiwa::tambah');
+    $routes->post('tambah-peristiwa', 'Peristiwa::simpan');
 });
-    // Login routes
+// Login routes
 $routes->get('/login', 'Login::index');
 $routes->post('/login/process', 'Login::process');
 $routes->get('/logout', 'Login::logout');
@@ -99,13 +101,23 @@ $routes->get('/logout', 'Login::logout');
 // Di dalam group admin:
 // Di dalam group admin, TAMBAHKAN routes ini:
 
+// Tambahkan baris ini di file app/Config/Routes.php
+
+// Rute untuk halaman pemilihan kuis
+$routes->get('quiz', 'QuizController::index'); 
+
+// Rute untuk memulai kuis, menangani mode (random) atau ID Kerajaan (VARCHAR)
+// '(:segment)' akan menangkap 'random' atau 'KUT400', 'MAJ1293', dst.
+$routes->get('quiz/start/(:segment)', 'QuizController::start/$1');
+$routes->post('quiz/submit', 'QuizController::submit');
 
 // Halaman Tentang
+
+$routes->get('/peta', 'PetaController::index');
 $routes->get('/tentang', 'TentangController::index');
 $routes->get('/tentang', 'TentangController::index');
+
 $routes->get('kerajaan/detail/(:segment)', 'Kerajaan::detail/$1');
 
 $routes->get('/kerajaan', 'DaftarKerajaan::index'); // masih boleh
 $routes->get('/daftar', 'DaftarKerajaan::index');   // tambahan baru
-
-$routes->get('/peta', 'PetaController::index');
