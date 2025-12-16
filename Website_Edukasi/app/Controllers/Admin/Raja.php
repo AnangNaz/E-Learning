@@ -49,75 +49,82 @@ class Raja extends BaseController
         return view('admin/raja/index', $data);
     }
 
-    public function create($mapel_id = null)
-    {
-        $tutor_id = $this->request->getCookie('tutor_id');
-        if (!$tutor_id) {
-            return redirect()->to('/login');
-        }
-
-        $mapelModel = new MapelModel();
-        $mapel = $mapelModel->where('id', $mapel_id)
-                           ->where('tutor_id', $tutor_id)
-                           ->first();
-
-        if (!$mapel) {
-            return redirect()->to('/admin/mapel')->with('error', 'Kerajaan tidak ditemukan!');
-        }
-
-        $data = [
-            'title' => 'Tambah Raja Baru',
-            'mapel' => $mapel,
-            'profile' => $this->getProfile($tutor_id)
-        ];
-
-        return view('admin/raja/create', $data);
+public function create()
+{
+    $tutor_id = $this->request->getCookie('tutor_id');
+    if (!$tutor_id) {
+        return redirect()->to('/login');
     }
 
-    public function store($mapel_id = null)
-    {
-        $tutor_id = $this->request->getCookie('tutor_id');
-        if (!$tutor_id) {
-            return redirect()->to('/login');
-        }
+    $mapelModel = new MapelModel();
+    
+    // Ambil semua mapel untuk dropdown
+    $mapelList = $mapelModel->where('tutor_id', $tutor_id)->findAll();
 
-        // Validasi
-        if (empty($this->request->getPost('nama')) || empty($this->request->getPost('cerita'))) {
-            return redirect()->back()->withInput()->with('error', 'Nama dan cerita harus diisi!');
-        }
+    if (empty($mapelList)) {
+        return redirect()->to('/admin/mapel/create')->with('error', 'Buat mapel terlebih dahulu!');
+    }
 
-        // Handle file upload
-        $foto = $this->request->getFile('foto');
-        $fotoName = 'default.jpg';
+    $data = [
+        'title' => 'Tambah Raja Baru',
+        'mapelList' => $mapelList,
+        'profile' => $this->getProfile($tutor_id)
+    ];
 
-        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
-            $fotoName = $foto->getRandomName();
-            $foto->move('uploaded_files/raja/', $fotoName);
-        }
+    return view('admin/raja/create', $data);
+}
 
-        // Gunakan Query Builder langsung
-        $db = \Config\Database::connect();
+public function store()
+{
+    $tutor_id = $this->request->getCookie('tutor_id');
+    if (!$tutor_id) {
+        return redirect()->to('/login');
+    }
+
+    // Ambil mapel_id dari FORM POST (dropdown), bukan parameter URL
+    $mapel_id = $this->request->getPost('mapel_id');
+    
+    if (!$mapel_id) {
+        return redirect()->back()->withInput()->with('error', 'Pilih kerajaan terlebih dahulu!');
+    }
+
+    // Validasi
+    if (empty($this->request->getPost('nama')) || empty($this->request->getPost('cerita'))) {
+        return redirect()->back()->withInput()->with('error', 'Nama dan cerita harus diisi!');
+    }
+
+    // Handle file upload
+    $foto = $this->request->getFile('foto');
+    $fotoName = 'default.jpg';
+
+    if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+        $fotoName = $foto->getRandomName();
+        $foto->move('uploaded_files/raja/', $fotoName);
+    }
+
+    // Gunakan Query Builder langsung
+    $db = \Config\Database::connect();
+    
+    $data = [
+        'mapel_id' => $mapel_id, // Dari form POST
+        'nama' => $this->request->getPost('nama'),
+        'cerita' => $this->request->getPost('cerita'),
+        'foto' => $fotoName,
+        'longitude' => $this->request->getPost('longitude') ?: null,
+        'latitude' => $this->request->getPost('latitude') ?: null,
+        'created_at' => date('Y-m-d H:i:s')
+    ];
+
+    try {
+        $db->table('raja')->insert($data);
         
-        $data = [
-            'mapel_id' => $mapel_id,
-            'nama' => $this->request->getPost('nama'),
-            'cerita' => $this->request->getPost('cerita'),
-            'foto' => $fotoName,
-            'longitude' => $this->request->getPost('longitude') ?: null,
-            'latitude' => $this->request->getPost('latitude') ?: null,
-            'created_at' => date('Y-m-d H:i:s')
-        ];
-
-        try {
-            $db->table('raja')->insert($data);
-            
-            return redirect()->to('/admin/mapel/' . $mapel_id . '/raja')
-                             ->with('success', 'Raja berhasil ditambahkan!');
-                             
-        } catch (\Exception $e) {
-            return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data: ' . $e->getMessage());
-        }
+        return redirect()->to('/admin/mapel/' . $mapel_id . '/raja')
+                         ->with('success', 'Raja berhasil ditambahkan!');
+                         
+    } catch (\Exception $e) {
+        return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data: ' . $e->getMessage());
     }
+}
 
     public function edit($id = null)
     {

@@ -84,24 +84,52 @@
 </section>
 
 
-<!-- ========================================= -->
-<!--                 SOAL LATIHAN              -->
-<!-- ========================================= -->
-<section class="contents">
-   <h1 class="heading">Soal Latihan</h1>
-
-   <div class="box-container">
-      <?php if (!empty($soal)) : ?>
-         <?php foreach ($soal as $s) : ?>
+<!-- Bagian soal di view_mapel.php -->
+ <section class="contents">
+<?php if(!empty($soal)): ?>
+    <h2 class="heading">Soal Quiz</h2>
+    <div class="box-container">
+        <?php $counter = 1; ?>
+        <?php foreach($soal as $row): ?>
             <div class="box">
-               <h3 class="title">Soal ID: <?= $s['id']; ?></h3>
-               <a href="<?= base_url('admin/soal/view/' . $s['id']); ?>" class="btn">Kerjakan Soal</a>
+                <div class="question-number">Soal #<?= $counter++; ?></div>
+                <h3 class="title"><?= esc($row['pertanyaan']); ?></h3>
+                
+                <div class="options-preview">
+                    <p><strong>A.</strong> <?= esc($row['pilihan_a']); ?></p>
+                    <p><strong>B.</strong> <?= esc($row['pilihan_b']); ?></p>
+                    <p><strong>C.</strong> <?= esc($row['pilihan_c']); ?></p>
+                    <p><strong>D.</strong> <?= esc($row['pilihan_d']); ?></p>
+                </div>
+                
+                <div class="answer-info">
+                    <p class="correct-answer">
+                        <i class="fas fa-check-circle"></i> Jawaban benar: 
+                        <strong class="answer-<?= $row['jawaban_benar']; ?>">
+                            <?= strtoupper($row['jawaban_benar']); ?>
+                        </strong>
+                    </p>
+                    <p class="mapel-info">
+                        <i class="fas fa-book"></i> Mapel ID: <?= esc($row['mapel_id']); ?>
+                    </p>
+                    <p class="date-info">
+                        <i class="fas fa-calendar"></i> Dibuat: <?= date('d/m/Y', strtotime($row['dibuat_pada'])); ?>
+                    </p>
+                </div>
+
+                <form method="post" action="<?= base_url('admin/delete-soal'); ?>" class="flex-btn">
+                    <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                    <a href="<?= base_url('admin/soal/edit/' . $row['id']); ?>" class="option-btn">update</a>
+                    <button type="submit" class="delete-btn" onclick="return confirm('Hapus soal ini?');">delete</button>
+                </form>
+
+                <a href="<?= base_url('admin/soal/view/' . $row['id']); ?>" class="btn">Lihat Detail</a>
             </div>
-         <?php endforeach; ?>
-      <?php else : ?>
-         <p class="empty">Belum ada soal pada mapel ini!</p>
-      <?php endif; ?>
-   </div>
+        <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <p class="empty">Belum ada soal untuk mapel ini!</p>
+<?php endif; ?>
 </section>
 
 <!-- ========================================= -->

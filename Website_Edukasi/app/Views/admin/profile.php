@@ -25,15 +25,15 @@
          <img src="<?= base_url('uploaded_files/' . ($profile['image'] ?? 'default.png')); ?>" alt="">
          <h3><?= esc($profile['name']); ?></h3>
          <span><?= esc($profile['profession']); ?></span>
-         <a href="<?= base_url('admin/update_profile'); ?>" class="inline-btn">Update Profile</a>
+         <a href="<?= base_url('admin/update'); ?>" class="inline-btn">Update Profile</a>
       </div>
 
       <div class="flex">
 
          <div class="box">
             <span><?= $total_mapel; ?></span>
-            <p>Total Mapel</p>
-            <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat Mapel</a>
+            <p>Total Kerajaan</p>
+            <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat kerajaan</a>
          </div>
 
          <div class="box">
@@ -42,17 +42,12 @@
             <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Materi</a>
          </div>
 
-         <div class="box">
-            <span><?= $total_likes; ?></span>
-            <p>Total Likes</p>
-            <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Materi</a>
-         </div>
+<div class="box">
+    <span><?= $total_Raja; ?></span>
+    <p>Total Raja</p>
+    <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat Raja</a>
+</div>
 
-         <div class="box">
-            <span><?= $total_comments; ?></span>
-            <p>Total Komentar</p>
-            <a href="<?= base_url('admin/komentar'); ?>" class="btn">Lihat Komentar</a>
-         </div>
 
       </div>
    </div>

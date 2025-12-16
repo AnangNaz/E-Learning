@@ -9,7 +9,7 @@ $logged_in = isset($profile) && !empty($profile);
 
       <a href="<?= base_url('admin/dashboard'); ?>" class="logo">Admin.</a>
 
-      <form action="<?= base_url('admin/search'); ?>" method="post" class="search-form">
+      <form action="<?= base_url('admin/search-mapel'); ?>" method="get" class="search-form">
          <input type="text" name="search" placeholder="search here..." required maxlength="100">
          <button type="submit" class="fas fa-search" name="search_btn"></button>
       </form>

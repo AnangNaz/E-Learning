@@ -10,7 +10,7 @@
 
 <?= view('admin/components/admin_header', ['profile' => $profile]); ?>
 
-<section class="contents">
+<div class="box-container">
     <h1 class="heading"><?= $title ?></h1>
     
     <div class="add-button">

@@ -1,0 +1,1626 @@
+DEBUG - 2025-12-10 03:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 03:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 04:38:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "update.php"
+[Method: GET, Route: admin/update]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('update.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('update', [], true)
+ 3 APPPATH\Controllers\Admin\Update.php(34): view('update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 04:43:28 --> ErrorException: include(C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Views/components/admin_header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/update]
+in APPPATH\Views\admin\update.php on line 22.
+ 1 APPPATH\Views\admin\update.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views/components/admin_header.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php', 22)
+ 2 APPPATH\Views\admin\update.php(22): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 6 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 04:44:00 --> ErrorException: Undefined variable $profile
+[Method: GET, Route: admin/update]
+in APPPATH\Views\admin\update.php on line 22.
+ 1 APPPATH\Views\admin\update.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php', 22)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 5 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 04:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 04:44:25 --> ErrorException: include(C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Views/components/admin_footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/update]
+in APPPATH\Views\admin\update.php on line 88.
+ 1 APPPATH\Views\admin\update.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views/components/admin_footer.php): Failed to open stream: No such file or directory', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php', 88)
+ 2 APPPATH\Views\admin\update.php(88): include()
+ 3 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 6 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 04:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 04:45:27 --> ErrorException: Undefined variable $profile
+[Method: GET, Route: admin/update]
+in APPPATH\Views\admin\update.php on line 17.
+ 1 APPPATH\Views\admin\update.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php', 17)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 5 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 04:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 04:51:18 --> ErrorException: Undefined variable $tutor
+[Method: GET, Route: admin/update]
+in APPPATH\Views\admin\update.php on line 22.
+ 1 APPPATH\Views\admin\update.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tutor', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php', 22)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 5 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 04:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 04:52:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/components/admin_footer.php"
+[Method: GET, Route: admin/update]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/components/admin_footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_footer', [], true)
+ 3 APPPATH\Views\admin\update.php(79): view('admin/components/admin_footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\update.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/update', [], true)
+ 7 APPPATH\Controllers\Admin\Update.php(34): view('admin/update', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Update->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Update))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 04:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 04:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 07:39:20 --> mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0Ps...')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 07:39:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+[Method: GET, Route: kerajaan/detail/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 07:39:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 07:39:20 --> [Caused by] mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 07:39:45 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: ";ogom"
+[Method: GET, Route: ;ogom]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars(';ogom')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle(';ogom')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 07:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 08:50:33 --> mysqli_sql_exception: Table 'course_db.raja' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Dashboard.php(36): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-10 08:50:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.raja' doesn't exist
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Dashboard.php(36): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 08:50:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.raja' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = \'5\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(36): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 08:50:33 --> [Caused by] mysqli_sql_exception: Table 'course_db.raja' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Dashboard.php(36): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 08:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 09:06:19 --> mysqli_sql_exception: Table 'course_db.comments' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Dashboard.php(43): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-10 09:06:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.comments' doesn't exist
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Dashboard.php(43): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:06:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(43): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:06:19 --> [Caused by] mysqli_sql_exception: Table 'course_db.comments' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `comments`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Dashboard.php(43): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:07:46 --> Error: Class "App\Models\CommentModel" not found
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Controllers\Admin\Dashboard.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 09:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 09:40:44 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:40:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:40:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'xiSTC60TXGui9PicT3x1\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'xiSTC60TXGui9PicT3x1\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:40:44 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'xiSTC60TXGui9PicT3x1\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'xiSTC60TXGui9PicT3x1\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'xiSTC60TXGui9PicT3x1\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 09:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 09:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 09:41:09 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:41:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:41:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:41:09 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-10 09:42:47 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:42:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:47 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-10 09:42:48 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:42:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:48 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-10 09:42:49 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:42:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:42:49 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-10 09:46:48 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:46:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:46:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:46:48 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-10 09:46:49 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 09:46:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/materi]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:46:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 09:46:49 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+ORDER BY `soal`.`date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title` AS `video_title`
+FROM `soal_quiz`
+LEFT JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `soal`.`tutor_id` = :soal.tutor_id:
+ORDER BY `soal`.`date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\Materi.php(47): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 10:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 10:04:54 --> ErrorException: Undefined array key "nama_mapel"
+[Method: GET, Route: admin/soal/create]
+in APPPATH\Views\admin\soal\create.php on line 93.
+ 1 APPPATH\Views\admin\soal\create.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\soal\\create.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\soal\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/soal/create', [], true)
+ 5 APPPATH\Controllers\Admin\Soal.php(56): view('admin/soal/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Soal->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Soal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 10:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 10:06:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/components/admin_footer.php"
+[Method: GET, Route: admin/soal/create]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/components/admin_footer.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/components/admin_footer', [], true)
+ 3 APPPATH\Views\admin\soal\create.php(169): view('admin/components/admin_footer')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\soal\\create.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/soal/create', [], true)
+ 7 APPPATH\Controllers\Admin\Soal.php(56): view('admin/soal/create', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Soal->create()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Soal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 10:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 10:13:13 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 10:13:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/mapel/view/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 10:13:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 10:13:13 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 10:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 10:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 10:22:22 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 10:22:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/mapel/view/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 10:22:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 10:22:22 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 13:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 13:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 14:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 14:49:38 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 14:49:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/mapel/view/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 14:49:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 14:49:38 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 16:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-10 16:22:50 --> mysqli_sql_exception: Unknown table 'course_db.soal' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-10 16:22:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+[Method: GET, Route: admin/mapel/view/5]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 16:22:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-10 16:22:50 --> [Caused by] mysqli_sql_exception: Unknown table 'course_db.soal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = \'5\'
+AND `soal`.`tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `soal`.*, `content`.`title`
+FROM `soal_quiz`
+JOIN `content` ON `content`.`id` = `soal`.`content_id`
+WHERE `content`.`playlist_id` = :content.playlist_id:
+AND `soal`.`tutor_id` = :soal.tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\ViewMapel.php(48): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\ViewMapel->index('5')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\ViewMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 16:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 16:36:17 --> ErrorException: Undefined array key "nama_mapel"
+[Method: GET, Route: admin/soal/edit/23]
+in APPPATH\Views\admin\soal\edit.php on line 94.
+ 1 APPPATH\Views\admin\soal\edit.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\soal\\edit.php', 94)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\soal\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/soal/edit', [], true)
+ 5 APPPATH\Controllers\Admin\Soal.php(117): view('admin/soal/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Soal->edit('23')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Soal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 16:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 16:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:33:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-10 17:36:05 --> TypeError: CodeIgniter\HTTP\RedirectResponse::back(): Argument #1 ($code) must be of type ?int, string given, called in C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Materi.php on line 114
+[Method: POST, Route: admin/delete-soal]
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 77.
+ 1 APPPATH\Controllers\Admin\Materi.php(114): CodeIgniter\HTTP\RedirectResponse->back('/admin/materi')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Materi->deleteSoal()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Materi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-10 17:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-10 17:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

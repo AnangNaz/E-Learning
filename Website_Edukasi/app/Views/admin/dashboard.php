@@ -34,14 +34,14 @@
 
       <div class="box">
          <h3><?= $total_mapel ?></h3>
-         <p>Total Mata Pelajaran</p>
-         <a href="<?= base_url('admin/tambah-mapel') ?>" class="btn">Tambah Mapel</a>
+         <p>Total Kerajaan</p>
+         <a href="<?= base_url('admin/tambah-mapel') ?>" class="btn">Tambah Kerajaan</a>
       </div>
 
       <div class="box">
-         <h3><?= $total_comments ?></h3>
-         <p>Total Komentar</p>
-         <a href="<?= base_url('admin/komentar') ?>" class="btn">Lihat Komentar</a>
+         <h3><?= $total_raja ?></h3>
+         <p>Total Raja</p>
+         <a href="<?= base_url('admin/mapel') ?>" class="btn">Lihat Raja</a>
       </div>
 
    </div>

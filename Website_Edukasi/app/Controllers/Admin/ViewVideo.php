@@ -26,7 +26,7 @@ class ViewVideo extends BaseController
         $contentModel = new ContentModel();
         $tutorModel = new TutorModel();
         $likesModel = new LikesModel();
-        $commentsModel = new CommentModel();
+        
         $db = \Config\Database::connect(); // Tambahkan ini
 
         // Ambil data video berdasarkan ID dan tutor_id
@@ -48,11 +48,6 @@ class ViewVideo extends BaseController
             ->where('content_id', $id)
             ->countAllResults();
 
-        // Hitung total comments untuk video ini oleh tutor ini
-        $total_comments = $commentsModel
-            ->where('tutor_id', $tutor_id)
-            ->where('content_id', $id)
-            ->countAllResults();
 
         // Ambil semua komentar untuk video ini dengan JOIN ke tabel users
         $builder = $db->table('comments');
@@ -65,7 +60,7 @@ class ViewVideo extends BaseController
             'profile' => $profile,
             'video' => $video,
             'total_likes' => $total_likes,
-            'total_comments' => $total_comments,
+
             'comments' => $comments, // Langsung berisi data user
         ];
 
@@ -88,7 +83,7 @@ class ViewVideo extends BaseController
 
         $contentModel = new ContentModel();
         $likesModel = new LikesModel();
-        $commentsModel = new CommentModel();
+  
 
         // Ambil data video untuk hapus file
         $video = $contentModel
@@ -114,7 +109,7 @@ class ViewVideo extends BaseController
         $likesModel->where('content_id', $id)->delete();
 
         // Hapus comments
-        $commentsModel->where('content_id', $id)->delete();
+
 
         // Hapus video dari database
         $contentModel->delete($id);
@@ -136,17 +131,14 @@ class ViewVideo extends BaseController
             return redirect()->back()->with('error', 'ID komentar tidak valid!');
         }
 
-        $commentsModel = new CommentModel();
+
 
         // Verifikasi komentar ada
-        $comment = $commentsModel->find($id);
+
         
-        if (!$comment) {
-            return redirect()->back()->with('error', 'Komentar sudah dihapus!');
-        }
 
         // Hapus komentar
-        $commentsModel->delete($id);
+   
 
         return redirect()->back()->with('success', 'Komentar berhasil dihapus!');
     }

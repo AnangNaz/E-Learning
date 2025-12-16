@@ -7,6 +7,7 @@ use App\Models\TutorModel;
 use App\Models\MateriModel;
 use App\Models\MapelModel;
 use App\Models\CommentModel;
+use App\Models\RajaModel;
 
 class Dashboard extends BaseController
 {
@@ -22,15 +23,24 @@ class Dashboard extends BaseController
         $tutors  = new TutorModel();
         $materi  = new MateriModel();
         $mapel   = new MapelModel();
-        $comment = new CommentModel();
+
+        $raja    = new RajaModel();
 
         $profile = $tutors->find($tutor_id);
+        
+        // Hitung total raja dari semua mapel milik tutor ini
+        $totalRaja = 0;
+        $mapels = $mapel->where('tutor_id', $tutor_id)->findAll();
+        
+        foreach ($mapels as $mapelItem) {
+            $totalRaja += $raja->where('mapel_id', $mapelItem['id'])->countAllResults();
+        }
 
         return view('admin/dashboard', [
             'profile'        => $profile,
             'total_contents' => $materi->where('tutor_id', $tutor_id)->countAllResults(),
-            'total_mapel'    => $mapel->where('tutor_id', $tutor_id)->countAllResults(),
-            'total_comments' => $comment->where('tutor_id', $tutor_id)->countAllResults(),
+            'total_mapel'    => count($mapels), // atau $mapel->where('tutor_id', $tutor_id)->countAllResults()
+            'total_raja'     => $totalRaja, // Tambahkan ini
         ]);
     }
 }

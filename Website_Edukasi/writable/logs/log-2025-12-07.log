@@ -1,0 +1,1786 @@
+ERROR - 2025-12-07 05:58:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 05:58:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:00:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 06:00:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:01:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 06:01:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:01:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 06:01:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:02:16 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 06:02:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:02:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'course_db', 3306, '', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 06:02:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mapel`
+WHERE `status` = :status:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Kerajaan.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:03:41 --> mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0Ps...')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-07 06:03:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+[Method: GET, Route: kerajaan/detail/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:03:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:03:41 --> [Caused by] mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:03:50 --> mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('69212ba1e5c3c')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-07 06:03:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+[Method: GET, Route: kerajaan/detail/69212ba1e5c3c]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('69212ba1e5c3c')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:03:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'69212ba1e5c3c\'
+ORDER BY `tahun` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'69212ba1e5c3c\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('69212ba1e5c3c')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:03:50 --> [Caused by] mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'69212ba1e5c3c\'
+ORDER BY `tahun` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'69212ba1e5c3c\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'69212ba1e5c3c\'
+ORDER BY `tahun` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('69212ba1e5c3c')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 06:04:28 --> mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0Ps...')
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-07 06:04:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+[Method: GET, Route: kerajaan/detail/Ba0w9QsokUse0PsITHth]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:04:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 06:04:28 --> [Caused by] mysqli_sql_exception: Table 'course_db.peristiwa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = \'Ba0w9QsokUse0PsITHth\'
+ORDER BY `tahun` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `peristiwa`
+WHERE `kerajaan_id` = :kerajaan_id:
+ORDER BY `tahun` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Kerajaan.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kerajaan->detail('Ba0w9QsokUse0PsITHth')
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kerajaan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 12:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-07 12:14:05 --> ErrorException: Undefined variable $raja
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 46.
+ 1 APPPATH\Views\admin\profile.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $raja', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 46)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:14:17 --> ErrorException: Undefined variable $raja
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 46.
+ 1 APPPATH\Views\admin\profile.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $raja', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 46)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:14:20 --> ErrorException: Undefined variable $raja
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 46.
+ 1 APPPATH\Views\admin\profile.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $raja', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 46)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:21:03 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:21:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:03 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:21:19 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:21:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:19 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:21:21 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:21:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:21 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:21:22 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:21:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:22 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:21:45 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:21:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:21:45 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:22:32 --> ArgumentCountError: Too few arguments to function CodeIgniter\Database\BaseBuilder::where(), 0 passed in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php on line 925 and at least 1 expected
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseBuilder.php on line 720.
+ 1 SYSTEMPATH\Model.php(925): CodeIgniter\Database\BaseBuilder->where()
+ 2 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->__call('where', [])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:22:43 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:22:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:22:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:22:43 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:22:44 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:22:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:22:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:22:44 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:23:39 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:23:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:39 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:23:40 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:23:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:40 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 12:23:41 --> mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 12:23:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+[Method: GET, Route: admin/profile]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:23:41 --> [Caused by] mysqli_sql_exception: Unknown column 'tutor_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `raja`
+WHERE `tutor_id` = :tutor_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\Profile.php(39): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:36:56 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:any)"
+[Method: GET, Route: mapel/%28:any%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('mapel/(:any)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('mapel/(:any)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 12:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-07 12:38:06 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:any)"
+[Method: GET, Route: admin/mapel/%28:any%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:any)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:any)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:42:15 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:any)"
+[Method: GET, Route: admin/mapel/%28:any%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:any)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:any)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:42:18 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:any)"
+[Method: GET, Route: admin/mapel/%28:any%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:any)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:any)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:42:21 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:segment)"
+[Method: GET, Route: admin/mapel/%28:segment%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:segment)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:segment)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:44:08 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:segment)"
+[Method: GET, Route: admin/mapel/%28:segment%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:segment)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:segment)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:44:09 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:segment)"
+[Method: GET, Route: admin/mapel/%28:segment%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:segment)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:segment)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:44:10 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "(:segment)"
+[Method: GET, Route: admin/mapel/%28:segment%29/raja]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('admin/mapel/(:segment)/raja')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('admin/mapel/(:segment)/raja')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:45:57 --> ErrorException: Undefined variable $mapel_id
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 48.
+ 1 APPPATH\Views\admin\profile.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mapel_id', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(52): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 12:45:59 --> ErrorException: Undefined variable $mapel_id
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 48.
+ 1 APPPATH\Views\admin\profile.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mapel_id', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(52): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 12:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-07 12:46:08 --> ErrorException: Undefined variable $mapel_id
+[Method: GET, Route: admin/profile]
+in APPPATH\Views\admin\profile.php on line 48.
+ 1 APPPATH\Views\admin\profile.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mapel_id', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\profile.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/profile', [], true)
+ 5 APPPATH\Controllers\Admin\Profile.php(52): view('admin/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 12:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 12:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:58:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 13:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-07 14:06:21 --> ErrorException: Undefined variable $total_Raja
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Views\admin\dashboard.php on line 42.
+ 1 APPPATH\Views\admin\dashboard.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_Raja', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(39): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 14:06:28 --> ErrorException: Undefined variable $total_Raja
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Views\admin\dashboard.php on line 42.
+ 1 APPPATH\Views\admin\dashboard.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_Raja', 'C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\app\\Views\\admin\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH\Controllers\Admin\Dashboard.php(39): view('admin/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 14:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-12-07 14:37:23 --> mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mapel`....', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mapel`....')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mapel`....')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mapel`....', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\SearchMapel.php(42): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#14 {main}
+CRITICAL - 2025-12-07 14:37:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'order clause'
+[Method: POST, Route: admin/search-mapel]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = :tutor_id:
+AND   (
+`nama_kerajaan` LIKE :nama_kerajaan: ESCAPE \'!\'
+OR  `lokasi` LIKE :lokasi: ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE :tahun_berdiri: ESCAPE \'!\'
+OR  `deskripsi` LIKE :deskripsi: ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Admin\SearchMapel.php(42): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 14:37:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+AND   (
+`nama_kerajaan` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `lokasi` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `deskripsi` LIKE \'%Kutai%\' ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+AND   (
+`nama_kerajaan` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `lokasi` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `deskripsi` LIKE \'%Kutai%\' ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = :tutor_id:
+AND   (
+`nama_kerajaan` LIKE :nama_kerajaan: ESCAPE \'!\'
+OR  `lokasi` LIKE :lokasi: ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE :tahun_berdiri: ESCAPE \'!\'
+OR  `deskripsi` LIKE :deskripsi: ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Admin\SearchMapel.php(42): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 14:37:23 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+AND   (
+`nama_kerajaan` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `lokasi` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `deskripsi` LIKE \'%Kutai%\' ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+AND   (
+`nama_kerajaan` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `lokasi` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `deskripsi` LIKE \'%Kutai%\' ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = \'MTk3EpvEUfQlXeCopxXK\'
+AND   (
+`nama_kerajaan` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `lokasi` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE \'%Kutai%\' ESCAPE \'!\'
+OR  `deskripsi` LIKE \'%Kutai%\' ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `mapel`.*
+FROM `mapel`
+WHERE `tutor_id` = :tutor_id:
+AND   (
+`nama_kerajaan` LIKE :nama_kerajaan: ESCAPE \'!\'
+OR  `lokasi` LIKE :lokasi: ESCAPE \'!\'
+OR  `tahun_berdiri` LIKE :tahun_berdiri: ESCAPE \'!\'
+OR  `deskripsi` LIKE :deskripsi: ESCAPE \'!\'
+ )
+ORDER BY `created_at` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin\SearchMapel.php(42): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+ERROR - 2025-12-07 14:38:57 --> mysqli_sql_exception: Unknown column 'mapel_id' in 'where clause' in C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp4\htdocs\E-Learning\Website_Edukasi\app\Controllers\Admin\SearchMapel.php(46): CodeIgniter\Model->countAllResults()
+#6 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+#7 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+#8 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp4\htdocs\E-Learning\Website_Edukasi\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp4\htdocs\E-Learning\Website_Edukasi\system\rewrite.php(44): require_once('C:\\xampp4\\htdoc...')
+#13 {main}
+CRITICAL - 2025-12-07 14:38:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mapel_id' in 'where clause'
+[Method: POST, Route: admin/search-mapel]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 3 APPPATH\Controllers\Admin\SearchMapel.php(46): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 14:38:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'mapel_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = \'Ba0w9QsokUse0PsITHth\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = \'Ba0w9QsokUse0PsITHth\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 5 APPPATH\Controllers\Admin\SearchMapel.php(46): CodeIgniter\Model->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+CRITICAL - 2025-12-07 14:38:57 --> [Caused by] mysqli_sql_exception: Unknown column 'mapel_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = \'Ba0w9QsokUse0PsITHth\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = \'Ba0w9QsokUse0PsITHth\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = \'Ba0w9QsokUse0PsITHth\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1733): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `materi`
+WHERE `mapel_id` = :mapel_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(675): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Controllers\Admin\SearchMapel.php(46): CodeIgniter\Model->countAllResults()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 14:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-12-07 14:41:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/layout/template.php"
+[Method: POST, Route: admin/search-mapel]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/layout/template.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('admin/layout/template', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('admin/search_mapel', [], true)
+ 4 APPPATH\Controllers\Admin\SearchMapel.php(71): view('admin/search_mapel', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\SearchMapel->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SearchMapel))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp4\\htdocs\\E-Learning\\Website_Edukasi\\public\\index.php')
+DEBUG - 2025-12-07 14:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 14:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 15:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-12-07 15:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

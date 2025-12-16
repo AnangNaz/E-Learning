@@ -13,13 +13,24 @@
 <section class="playlist-form">
     <h1 class="heading"><?= $title ?></h1>
     
-    <form action="<?= base_url('admin/raja/store/' . $mapel['id']) ?>" method="post" enctype="multipart/form-data" class="form">
+    <form action="<?= base_url('admin/raja/store') ?>" method="post" enctype="multipart/form-data" class="form">
         
         <?php if (session()->has('errors')): ?>
             <?php foreach (session('errors') as $error): ?>
                 <div class="error-message"><?= $error ?></div>
             <?php endforeach; ?>
         <?php endif; ?>
+        
+        <!-- Dropdown untuk memilih mapel -->
+        <p>Pilih Mata Pelajaran <span>*</span></p>
+        <select name="mapel_id" class="box" required>
+            <option value="">-- Pilih Mapel --</option>
+            <?php foreach ($mapelList as $mapel): ?>
+                <option value="<?= $mapel['id'] ?>" <?= (isset($selectedMapel) && $selectedMapel['id'] == $mapel['id']) ? 'selected' : '' ?>>
+                    <?= esc($mapel['nama_kerajaan']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
         
         <p>Nama Raja <span>*</span></p>
         <input type="text" name="nama" maxlength="100" placeholder="Masukkan nama raja" class="box" required>
@@ -44,7 +55,7 @@
         </div>
         
         <input type="submit" value="Simpan Raja" name="submit" class="btn">
-        <a href="<?= base_url('admin/mapel/' . $mapel['id'] . '/raja') ?>" class="option-btn">Kembali</a>
+        <a href="<?= isset($mapel['id']) ? base_url('admin/mapel/' . $mapel['id'] . '/raja') : base_url('admin/materi') ?>" class="option-btn">Kembali</a>
         
         <?= csrf_field(); ?>
     </form>

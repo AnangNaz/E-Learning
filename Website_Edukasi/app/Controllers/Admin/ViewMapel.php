@@ -40,12 +40,15 @@ class ViewMapel extends BaseController
         $materi = $materiModel->where('playlist_id', $id)->where('tutor_id', $tutor_id)->findAll();
 
         // ambil soal
-        $soal = $soalModel
-            ->select('soal.*, content.title')
-            ->join('content', 'content.id = soal.content_id')
-            ->where('content.playlist_id', $id)
-            ->where('soal.tutor_id', $tutor_id)
-            ->findAll();
+// ambil soal hanya untuk mapel yang dimiliki oleh tutor ini
+$soal = $soalModel
+    ->whereIn('mapel_id', function($builder) use ($tutor_id) {
+        return $builder->select('id')
+                      ->from('mapel')
+                      ->where('tutor_id', $tutor_id);
+    })
+    ->where('mapel_id', $id)
+    ->findAll();
 
         $data = [
             'profile' => $profile,
