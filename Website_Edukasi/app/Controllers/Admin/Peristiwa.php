@@ -92,7 +92,7 @@ public function store()
 
     $peristiwaModel->insert($data);
 
-    return redirect()->to('/admin/mapel/' . $data['kerajaan_id'] . '/peristiwa')
+    return redirect()->to('/admin/materi')
                      ->with('success', 'Peristiwa berhasil ditambahkan!');
 }
 
@@ -152,29 +152,24 @@ public function edit($id = null)
             return redirect()->back()->with('error', 'Peristiwa tidak ditemukan!');
         }
 
-        // Validasi
-        $rules = [
-            'kerajaan_id' => 'required|numeric',
-            'judul' => 'required|max_length[200]',
-            'tahun' => 'required|numeric',
-            'deskripsi' => 'required'
-        ];
+$rules = [
+    'kerajaan_id' => 'required|numeric',
+    'nama_peristiwa' => 'required|max_length[255]',
+    'tahun' => 'permit_empty|max_length[50]',
+    'deskripsi' => 'required'
+];
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
+$data = [
+    'kerajaan_id' => $this->request->getVar('kerajaan_id'),
+    'nama_peristiwa' => $this->request->getVar('nama_peristiwa'),
+    'tahun' => $this->request->getVar('tahun') ?: null,
+    'deskripsi' => $this->request->getVar('deskripsi')
+];
 
-        // Update data
-        $data = [
-            'kerajaan_id' => $this->request->getVar('kerajaan_id'),
-            'judul' => $this->request->getVar('judul'),
-            'tahun' => $this->request->getVar('tahun'),
-            'deskripsi' => $this->request->getVar('deskripsi')
-        ];
 
         $peristiwaModel->update($id, $data);
 
-        return redirect()->to('/admin/mapel/' . $data['kerajaan_id'] . '/peristiwa')
+        return redirect()->to('/admin/materi')
                          ->with('success', 'Peristiwa berhasil diperbarui!');
     }
 
@@ -205,7 +200,7 @@ public function edit($id = null)
 
         $peristiwaModel->delete($id);
 
-        return redirect()->back()->with('success', 'Peristiwa berhasil dihapus!');
+         return redirect()->to('/admin/materi')->with('success', 'Peristiwa berhasil dihapus!');
     }
     
     /**

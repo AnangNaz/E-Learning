@@ -35,10 +35,11 @@
             <?php endforeach; ?>
         </select>
         
-        <p>Judul Peristiwa <span>*</span></p>
-        <input type="text" name="judul" maxlength="200" 
-               placeholder="Contoh: Perang Bubat, Sumpah Palapa, dll" 
-               class="box" value="<?= old('judul', $peristiwa['judul']) ?>" required>
+<p>Nama Peristiwa <span>*</span></p>
+<input type="text" name="nama_peristiwa" maxlength="255" 
+       placeholder="Contoh: Perang Bubat, Sumpah Palapa, dll" 
+       class="box" value="<?= old('nama_peristiwa', $peristiwa['nama_peristiwa']) ?>" required>
+
         
         <p>Tahun Peristiwa <span>*</span></p>
         <input type="number" name="tahun" 
