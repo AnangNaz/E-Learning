@@ -7,15 +7,35 @@
   <title><?= $kerajaan['nama_kerajaan'] ?> - Detail Kerajaan</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <script>
+    // Custom Tailwind config for premium look
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#1F2937', // Darker base color
+            'secondary-gold': '#F59E0B', // Gold accent
+            'secondary-indigo': '#4F46E5', // Indigo accent
+          },
+        }
+      }
+    }
+  </script>
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      /* Latar belakang lebih netral */
     }
 
     .title-font {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cinzel', serif;
+      /* Font header yang lebih elegan */
     }
 
     .fade-in {
@@ -33,136 +53,155 @@
         transform: translateY(0);
       }
     }
+
+    #map {
+      height: 450px;
+      border-radius: 1rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 0.25rem;
+      width: 12px;
+      height: 12px;
+      background-color: #4F46E5;
+      border-radius: 50%;
+      border: 3px solid #E0E7FF;
+    }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-100 min-h-screen">
+<body class="text-gray-800">
 
-  <!-- HEADER -->
-  <header class="backdrop-blur-md bg-white/70 shadow-md fixed top-0 left-0 right-0 z-50 border-b border-indigo-100">
+  <header class="bg-white/95 backdrop-blur-md shadow-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-3xl title-font font-bold text-indigo-700">Nusantara Heritage</h1>
+      <h1 class="text-3xl title-font font-bold text-primary-dark tracking-wide">Nusantara Heritage</h1>
       <nav class="space-x-6 text-lg font-semibold text-gray-700">
-        <a href="/" class="hover:text-indigo-600 transition">Home</a>
-        <a href="<?= base_url('peta') ?>" class="hover:text-indigo-600 transition">Peta</a>
-        <a href="/kerajaan" class="hover:text-indigo-600 transition">Daftar Kerajaan</a>
-        <a href="/tentang" class="hover:text-indigo-600 transition">Tentang</a>
+        <a href="<?= base_url('/') ?>" class="hover:text-secondary-indigo transition">Home</a>
+        <a href="<?= base_url('peta') ?>" class="hover:text-secondary-indigo transition">Peta</a>
+        <a href="<?= base_url('kerajaan') ?>" class="hover:text-secondary-indigo transition">Daftar Kerajaan</a>
+        <a href="<?= base_url('quiz') ?>" class="px-3 py-1 bg-secondary-gold text-white rounded-full hover:bg-amber-600 transition font-semibold">Quiz</a>
+        <a href="<?= base_url('tentang') ?>" class="hover:text-secondary-indigo transition">Tentang</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="mt-20 relative w-full h-[430px] fade-in">
+  <section class="mt-[68px] relative w-full h-[480px] fade-in">
     <img src="/uploaded_files/<?= $kerajaan['foto_raja'] ?>"
       class="w-full h-full object-cover brightness-75">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 to-transparent"></div>
 
-    <div class="absolute bottom-10 left-10">
-      <h1 class="text-white title-font text-6xl font-bold drop-shadow-xl mb-3">
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-7xl px-6 text-center">
+      <a href="<?= base_url('kerajaan') ?>" class="inline-flex items-center text-sm font-semibold text-secondary-gold hover:text-white transition mb-3">
+        ← Kembali ke Daftar Kerajaan
+      </a>
+      <h1 class="text-white title-font text-6xl font-extrabold drop-shadow-2xl mb-4 tracking-wider">
         <?= $kerajaan['nama_kerajaan'] ?>
       </h1>
-      <p class="text-indigo-200 text-xl drop-shadow-lg">
-        <?= $kerajaan['lokasi'] ?> • Berdiri tahun <?= $kerajaan['tahun_berdiri'] ?>
-      </p>
+      <div class="inline-flex items-center space-x-4 text-xl text-gray-200 drop-shadow-lg">
+        <p><span class="font-bold">Lokasi:</span> <?= $kerajaan['lokasi'] ?></p>
+        <div class="w-1 h-1 bg-gray-400 rounded-full"></div>
+        <p><span class="font-bold">Berdiri:</span> <?= $kerajaan['tahun_berdiri'] ?></p>
+        <div class="w-1 h-1 bg-gray-400 rounded-full"></div>
+        <span class="px-3 py-1 text-sm font-bold rounded-full <?= ($kerajaan['periode'] ?? '') === 'Hindu-Buddha' ? 'bg-amber-500' : 'bg-green-500' ?> text-white">
+          <?= $kerajaan['periode'] ?? 'Periode Lain' ?>
+        </span>
+      </div>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <section class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 lg:grid-cols-3 gap-10 fade-in">
+  <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-    <!-- INFO SIDEBAR -->
     <div class="lg:col-span-1">
-      <div class="bg-white shadow-xl rounded-2xl p-6 border border-gray-200 sticky top-28">
-        <h2 class="title-font text-2xl font-bold mb-6 text-indigo-700">Informasi Kerajaan</h2>
+      <div class="bg-white shadow-2xl rounded-2xl p-8 border border-gray-100 sticky top-28">
+        <h2 class="title-font text-3xl font-bold mb-6 text-primary-dark border-b pb-3">Fakta Cepat</h2>
 
         <div class="space-y-4 text-gray-700 text-lg">
-          <p><strong class="text-indigo-600">Tahun Berdiri:</strong> <?= $kerajaan['tahun_berdiri'] ?></p>
-          <p><strong class="text-indigo-600">Lokasi:</strong> <?= $kerajaan['lokasi'] ?></p>
-          <p><strong class="text-indigo-600">Tanggal Tambah:</strong> <?= $kerajaan['date'] ?></p>
-
-          <p class="flex items-center gap-2">
-            <strong class="text-indigo-600">Status:</strong>
-            <span class="px-3 py-1 text-sm font-semibold rounded-full 
-            <?= $kerajaan['status'] === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700' ?>">
+          <p class="flex justify-between items-center"><strong class="text-secondary-indigo">Tahun Berdiri:</strong> <span class="font-semibold"><?= $kerajaan['tahun_berdiri'] ?></span></p>
+          <p class="flex justify-between items-center"><strong class="text-secondary-indigo">Ibukota:</strong> <span class="font-semibold"><?= $kerajaan['lokasi'] ?></span></p>
+          <p class="flex justify-between items-center"><strong class="text-secondary-indigo">Status Data:</strong>
+            <span class="px-3 py-1 text-xs font-bold rounded-full 
+                        <?= $kerajaan['status'] === 'active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700' ?>">
               <?= ucfirst($kerajaan['status']) ?>
             </span>
           </p>
+          <p class="pt-4 border-t border-gray-200 flex justify-between items-center">
+            <strong class="text-secondary-indigo">Tanggal Ditambahkan:</strong> <span class="text-sm"><?= $kerajaan['date'] ?></span>
+          </p>
         </div>
 
-        <hr class="my-6 border-gray-300">
+        <hr class="my-6 border-gray-200">
 
-        <a href="/kerajaan"
-          class="block text-center bg-indigo-600 text-white px-4 py-3 rounded-xl shadow-md 
-                 hover:bg-indigo-700 transition font-semibold text-lg">
-          ← Kembali ke Daftar
+        <a href="#map-section"
+          class="block text-center bg-secondary-gold text-primary-dark px-4 py-3 rounded-xl shadow-lg 
+                    hover:bg-amber-600 transition font-bold text-lg border-b-4 border-amber-700/80">
+          Lihat Lokasi di Peta ↓
         </a>
-
       </div>
     </div>
 
-    <!-- MAIN CONTENT RIGHT -->
-    <div class="lg:col-span-2 space-y-10">
+    <div class="lg:col-span-2 space-y-12">
 
-      <!-- DESKRIPSI -->
-      <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
-        <h3 class="title-font text-4xl font-bold text-indigo-700 mb-4">Sejarah & Deskripsi</h3>
-        <p class="text-gray-700 leading-relaxed text-lg">
+      <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+        <h3 class="title-font text-4xl font-bold text-primary-dark mb-6">Sejarah & Deskripsi</h3>
+        <div class="text-gray-700 leading-relaxed text-lg prose max-w-none">
           <?= nl2br($kerajaan['deskripsi']) ?>
-        </p>
+        </div>
       </div>
 
-      <!-- RAJA SECTION -->
-      <?php if (!empty($kerajaan['daftar_raja'])): ?>
-        <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
-          <h3 class="title-font text-4xl font-bold text-indigo-700 mb-5">Tokoh & Raja Penting</h3>
-          <ul class="list-disc ml-6 space-y-2 text-gray-700 text-lg">
-            <?php foreach (explode("\n", $kerajaan['daftar_raja']) as $raja): ?>
-              <li><?= trim($raja) ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-      <?php endif; ?>
-
-      <!-- TIMELINE PERISTIWA -->
-      <h2 class="text-2xl font-bold mt-10 mb-4">Peristiwa Penting</h2>
-
       <?php if (!empty($peristiwa)) : ?>
-        <div class="relative border-l border-gray-300 ml-4">
+        <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+          <h3 class="title-font text-4xl font-bold text-primary-dark mb-8">Garis Waktu Peristiwa Penting</h3>
 
-          <?php foreach ($peristiwa as $item) : ?>
-            <div class="mb-10 ml-6">
-              <!-- Bulatan -->
-              <div class="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white"></div>
+          <div class="relative border-l-4 border-secondary-indigo ml-4">
+            <?php foreach ($peristiwa as $item) : ?>
+              <div class="mb-10 ml-8 relative timeline-item">
+                <p class="text-sm text-secondary-indigo font-bold mb-1"><?= esc($item['tahun']) ?></p>
 
-              <!-- Tahun -->
-              <p class="text-sm text-gray-500"><?= esc($item['tahun']) ?></p>
+                <h3 class="text-2xl font-semibold text-primary-dark">
+                  <?= esc($item['nama_peristiwa']) ?>
+                </h3>
 
-              <!-- Judul -->
-              <h3 class="text-lg font-semibold text-gray-900">
-                <?= esc($item['nama_peristiwa']) ?>
-              </h3>
+                <p class="text-gray-700 mt-2">
+                  <?= esc($item['deskripsi']) ?>
+                </p>
+              </div>
+            <?php endforeach; ?>
 
-              <!-- Deskripsi -->
-              <p class="text-gray-700 mt-2">
-                <?= esc($item['deskripsi']) ?>
-              </p>
+            <div class="mb-10 ml-8 relative timeline-item">
+              <div class="absolute w-4 h-4 bg-gray-500 rounded-full -left-18px top-0.25rem border border-white"></div>
+              <p class="text-sm text-gray-500 font-bold mb-1">Masa Kini</p>
+              <h3 class="text-lg font-semibold text-gray-900">Peninggalan Terawat</h3>
             </div>
-          <?php endforeach; ?>
-
+          </div>
         </div>
-
-      <?php else : ?>
-        <p class="text-gray-600">Belum ada peristiwa yang dicatat untuk kerajaan ini.</p>
       <?php endif; ?>
 
+      <?php if (!empty($kerajaan['daftar_raja'])): ?>
+        <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+          <h3 class="title-font text-4xl font-bold text-primary-dark mb-8">Tokoh & Raja Penting</h3>
 
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <?php
+            $raja_list = array_filter(explode("\n", $kerajaan['daftar_raja']));
+            $icon_raja = ["👑", "🤴", "👸", "🛡️", "📜"];
+            foreach ($raja_list as $index => $raja):
+            ?>
+              <div class="flex items-start bg-indigo-50/50 p-4 rounded-xl border border-indigo-200 shadow-sm">
+                <span class="text-2xl mr-4 flex-shrink-0"><?= $icon_raja[$index % count($icon_raja)] ?></span>
+                <p class="text-gray-700 text-lg font-medium"><?= trim($raja) ?></p>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      <?php endif; ?>
 
-      <!-- FAKTA MENARIK – PREMIUM STYLE -->
-      <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-10 rounded-2xl border border-indigo-200 shadow-xl">
-        <h3 class="title-font text-4xl font-bold text-indigo-800 mb-8">Fakta Menarik</h3>
+      <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+        <h3 class="title-font text-4xl font-bold text-primary-dark mb-8">Trivia & Fakta Menarik</h3>
 
         <?php
-        // kumpulkan semua fakta dari peristiwa
         $listFakta = [];
         foreach ($peristiwa as $p) {
           if (!empty($p['fakta_menarik'])) {
@@ -173,125 +212,104 @@
             }
           }
         }
-
-        // icon random aesthetic
         $icons = ["⭐", "🏺", "📜", "🛕", "⚔️", "👑", "🌏", "🔥"];
-
-        // warna card
-        $colors = [
-          "bg-white border-blue-200",
-          "bg-white border-purple-200",
-          "bg-white border-indigo-200",
-          "bg-white border-teal-200"
-        ];
         ?>
 
         <?php if (!empty($listFakta)) : ?>
-
           <div class="grid md:grid-cols-2 gap-6">
             <?php foreach ($listFakta as $index => $f): ?>
-              <?php
-              $icon = $icons[$index % count($icons)];
-              $color = $colors[$index % count($colors)];
-              ?>
-
-              <div class="p-5 <?= $color ?> rounded-xl shadow hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <?php $icon = $icons[$index % count($icons)]; ?>
+              <div class="p-5 bg-secondary-gold/10 border-l-4 border-secondary-gold rounded-xl shadow-md transition duration-300 hover:shadow-lg">
                 <div class="flex items-start gap-4">
-                  <div class="text-3xl"><?= $icon ?></div>
-                  <p class="text-gray-700 text-lg leading-relaxed">
+                  <div class="text-2xl mt-0.5"><?= $icon ?></div>
+                  <p class="text-gray-700 text-base leading-relaxed">
                     <?= esc($f) ?>
                   </p>
                 </div>
               </div>
-
             <?php endforeach; ?>
           </div>
-
         <?php else: ?>
-
           <p class="text-gray-600 italic">Belum ada fakta menarik yang tersedia.</p>
-
         <?php endif; ?>
       </div>
 
 
-      <!-- TIMELINE SEDERHANA -->
-      <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
-        <h3 class="title-font text-4xl font-bold text-indigo-700 mb-8">Timeline Singkat</h3>
-
-        <div class="space-y-8">
-          <div class="flex gap-4 items-start">
-            <div class="w-4 h-4 bg-indigo-600 rounded-full mt-1"></div>
-            <p class="text-gray-700 text-lg"><strong><?= $kerajaan['tahun_berdiri'] ?>:</strong> Kerajaan mulai berdiri dan berkembang.</p>
-          </div>
-
-          <div class="flex gap-4 items-start">
-            <div class="w-4 h-4 bg-indigo-600 rounded-full mt-1"></div>
-            <p class="text-gray-700 text-lg">Masa keemasan kerajaan dengan kekuatan politik & ekonomi besar.</p>
-          </div>
-
-          <div class="flex gap-4 items-start">
-            <div class="w-4 h-4 bg-indigo-600 rounded-full mt-1"></div>
-            <p class="text-gray-700 text-lg">Perluasan wilayah dan hubungan dengan kerajaan lain.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
 
   </section>
 
-  <!-- MAP -->
-  <div class="max-w-7xl mx-auto px-6 fade-in">
-    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
-      <h3 class="title-font text-4xl font-bold text-indigo-700 mb-4">Lokasi Kerajaan</h3>
+  <div class="max-w-7xl mx-auto px-6 fade-in" id="map-section">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl border border-gray-100">
+      <h3 class="title-font text-4xl font-bold text-primary-dark mb-6">Lokasi Geografis</h3>
 
-      <div id="map" class="w-full h-96 rounded-xl border border-gray-300 shadow"></div>
+      <div id="map" class="w-full h-96 rounded-xl border-4 border-secondary-indigo/50 shadow-inner"></div>
 
-      <p class="mt-3 text-gray-600 text-sm">
-        Latitude: <strong><?= $kerajaan['latitude'] ?></strong>,
-        Longitude: <strong><?= $kerajaan['longitude'] ?></strong>
-      </p>
+      <div class="mt-4 flex justify-between items-center text-sm text-gray-600">
+        <p>
+          Koordinat: Lat: <strong><?= $kerajaan['latitude'] ?></strong>, Long: <strong><?= $kerajaan['longitude'] ?></strong>
+        </p>
+        <a href="https://maps.google.com/?q=<?= $kerajaan['latitude'] ?>,<?= $kerajaan['longitude'] ?>" target="_blank" class="text-secondary-indigo font-semibold hover:underline">
+          Lihat di Google Maps →
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-indigo-900 text-gray-200 py-10 mt-20">
+  <footer class="bg-primary-dark text-gray-200 py-12 mt-20 border-t-6 border-secondary-gold">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h3 class="title-font text-2xl font-bold mb-3">Nusantara Heritage</h3>
-      <p class="mb-6">Eksplorasi sejarah kerajaan yang membentuk Indonesia.</p>
+      <h3 class="title-font text-3xl font-bold mb-3 text-secondary-gold">Nusantara Heritage</h3>
+      <p class="mb-6 opacity-80">Eksplorasi sejarah kerajaan yang membentuk Indonesia.</p>
 
       <div class="flex justify-center space-x-6 mb-6 font-semibold">
-        <a href="/" class="hover:text-white">Home</a>
-        <a href="/kerajaan" class="hover:text-white">Daftar Kerajaan</a>
-        <a href="/tentang" class="hover:text-white">Tentang</a>
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/kerajaan" class="hover:text-white transition">Daftar Kerajaan</a>
+        <a href="/tentang" class="hover:text-white transition">Tentang</a>
       </div>
 
       <p class="text-sm opacity-70">© <?= date('Y') ?> Nusantara Heritage • All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- LEAFLET MAP -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
   <script>
     const lat = <?= $kerajaan['latitude'] ?>;
     const lng = <?= $kerajaan['longitude'] ?>;
+    const namaKerajaan = "<?= $kerajaan['nama_kerajaan'] ?>";
 
-    if (!isNaN(lat) && !isNaN(lng)) {
-      var map = L.map('map').setView([lat, lng], 10);
+    if (!isNaN(lat) && !isNaN(lng) && lat !== 0 && lng !== 0) {
+      var map = L.map('map').setView([lat, lng], 8);
 
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      // Layer Peta Premium (CartoDB Positron - Kontras rendah, elegan)
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
         maxZoom: 19
       }).addTo(map);
 
-      L.marker([lat, lng]).addTo(map)
-        .bindPopup("Lokasi Kerajaan: <?= $kerajaan['nama_kerajaan'] ?>")
+      // Custom Icon untuk Marker (Jika Anda memiliki logo atau ingin custom)
+      var KerajaanIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: '<div style="background-color: #F59E0B; width: 15px; height: 15px; border-radius: 50%; border: 3px solid #4F46E5; box-shadow: 0 0 5px rgba(0,0,0,0.5);"></div>',
+        iconSize: [15, 15],
+        iconAnchor: [7, 7]
+      });
+
+      L.marker([lat, lng], {
+          icon: KerajaanIcon
+        }).addTo(map)
+        .bindPopup(`<strong>${namaKerajaan}</strong><br>Lokasi Ibu Kota.`)
         .openPopup();
+
+      // Opsional: Tambahkan kontrol skala
+      L.control.scale().addTo(map);
+
+    } else {
+      document.getElementById('map').innerHTML = '<div class="h-full flex items-center justify-center text-xl text-red-500 font-semibold">Koordinat lokasi tidak valid atau tidak tersedia.</div>';
     }
   </script>
-
 </body>
 
 </html>

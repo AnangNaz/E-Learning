@@ -10,6 +10,6 @@ class PetaController extends BaseController
         $model = new KerajaanModel();
         $data['kerajaan'] = $model->findAll();
 
-        return view('kerajaan/petaKerajaan', $data);
+        return view('kerajaan/PetaKerajaan', $data);
     }
 }
