@@ -6,6 +6,90 @@
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    <link rel="stylesheet" href="<?= base_url('css/styleadmin.css'); ?>">
+   
+   <style>
+      /* CSS Tambahan untuk Peristiwa */
+      .peristiwa-card {
+         background: #fff;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         padding: 20px;
+         margin-bottom: 15px;
+         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      
+      .peristiwa-card h4 {
+         color: #333;
+         margin-bottom: 10px;
+         font-size: 1.2rem;
+         border-bottom: 2px solid #007bff;
+         padding-bottom: 5px;
+      }
+      
+      .peristiwa-meta {
+         display: flex;
+         gap: 15px;
+         margin-bottom: 10px;
+         color: #666;
+         font-size: 0.9rem;
+      }
+      
+      .peristiwa-meta span {
+         background: #f8f9fa;
+         padding: 3px 8px;
+         border-radius: 4px;
+      }
+      
+      .fakta-menarik {
+         background: #e7f3ff;
+         border-left: 4px solid #007bff;
+         padding: 10px 15px;
+         margin: 15px 0;
+         border-radius: 0 4px 4px 0;
+      }
+      
+      .fakta-menarik strong {
+         color: #0056b3;
+      }
+      
+      .peristiwa-img {
+         max-width: 300px;
+         max-height: 200px;
+         border-radius: 8px;
+         margin-top: 15px;
+         border: 3px solid #eee;
+      }
+      
+      .empty-peristiwa {
+         text-align: center;
+         padding: 40px;
+         color: #666;
+         background: #f9f9f9;
+         border-radius: 8px;
+         border: 2px dashed #ddd;
+      }
+      
+      .empty-peristiwa i {
+         font-size: 50px;
+         color: #ccc;
+         margin-bottom: 15px;
+      }
+      
+      .add-peristiwa-btn {
+         display: inline-block;
+         background: #28a745;
+         color: white;
+         padding: 10px 20px;
+         border-radius: 5px;
+         text-decoration: none;
+         margin-top: 20px;
+         transition: background 0.3s;
+      }
+      
+      .add-peristiwa-btn:hover {
+         background: #218838;
+      }
+   </style>
 </head>
 <body>
 
@@ -32,7 +116,7 @@
          <p><strong>Daftar Raja:</strong><br><?= nl2br($mapel['daftar_raja']); ?></p>
 
          <div class="flex-btn">
-            <a href="<?= base_url('admin/mapel/update/' . $mapel['id']); ?>" class="option-btn">Update Mapel</a>
+            <a href="<?= base_url('admin/update-mapel/' . $mapel['id']); ?>" class="option-btn">Update Mapel</a>
          </div>
       </div>
 
@@ -40,46 +124,68 @@
 </section>
 
 
-<!-- ========================================= -->
-<!--               VIDEO PEMBELAJARAN          -->
-<!-- ========================================= -->
-<section class="contents">
-   <h1 class="heading">Video Pembelajaran</h1>
 
-   <div class="box-container">
-      <?php if (!empty($videos)) : ?>
-         <?php foreach ($videos as $v) : ?>
-            <div class="box">
-               <img src="<?= base_url('uploaded_files/' . $v['thumb']); ?>" class="thumb">
-               <h3 class="title"><?= esc($v['title']); ?></h3>
-               <a href="<?= base_url('admin/content/view/' . $v['id']); ?>" class="btn">Tonton Video</a>
+<!-- ========================================= -->
+<!--               PERISTIWA KERAJAAN          -->
+<!-- ========================================= -->
+ <section class="contents">
+   <h1 class="heading">Peristiwa Kerajaan 
+      <?php if (!empty($peristiwa)): ?>
+         <span class="badge"><?= count($peristiwa); ?> Peristiwa</span>
+      <?php endif; ?>
+   </h1>
+
+   <div class="peristiwa-container">
+      <?php if (!empty($peristiwa)) : ?>
+         <?php foreach ($peristiwa as $p) : ?>
+            <div class="peristiwa-card">
+               <h4><?= esc($p['nama_peristiwa']); ?></h4>
+               
+               <div class="peristiwa-meta">
+                  <?php if ($p['tahun']): ?>
+                     <span><i class="fas fa-calendar-alt"></i> Tahun: <?= esc($p['tahun']); ?></span>
+                  <?php endif; ?>
+                  
+                  <?php if ($p['lokasi']): ?>
+                     <span><i class="fas fa-map-marker-alt"></i> Lokasi: <?= esc($p['lokasi']); ?></span>
+                  <?php endif; ?>
+               </div>
+               
+               <div class="peristiwa-deskripsi">
+                  <p><?= nl2br(esc($p['deskripsi'])); ?></p>
+               </div>
+               
+               <?php if ($p['fakta_menarik']): ?>
+                  <div class="fakta-menarik">
+                     <strong><i class="fas fa-star"></i> Fakta Menarik:</strong>
+                     <p><?= nl2br(esc($p['fakta_menarik'])); ?></p>
+                  </div>
+               <?php endif; ?>
+               
+               <?php if ($p['foto_peristiwa'] && $p['foto_peristiwa'] != 'default.jpg'): ?>
+                  <img src="<?= base_url('uploaded_files/peristiwa/' . $p['foto_peristiwa']); ?>" 
+                       alt="<?= esc($p['nama_peristiwa']); ?>" 
+                       class="peristiwa-img">
+               <?php endif; ?>
+               
+               <div class="flex-btn" style="margin-top: 15px;">
+                  <a href="<?= base_url('admin/peristiwa/edit/' . $p['id']); ?>" class="option-btn">Edit</a>
+                  
+                  <a href="<?= base_url('admin/peristiwa/delete/' . $p['id']); ?>" 
+                     class="delete-btn" 
+                     onclick="return confirm('Hapus peristiwa ini?');">Hapus</a>
+               </div>
             </div>
          <?php endforeach; ?>
       <?php else : ?>
-         <p class="empty">Belum ada video pada mapel ini!</p>
+         <div class="empty-peristiwa">
+            <i class="fas fa-history"></i>
+            <h3>Belum Ada Peristiwa</h3>
+            <p>Belum ada peristiwa yang tercatat untuk kerajaan ini.</p>
+         </div>
       <?php endif; ?>
    </div>
-</section>
-
-
-
-<!-- ========================================= -->
-<!--               MATERI PEMBELAJARAN         -->
-<!-- ========================================= -->
-<section class="contents">
-   <h1 class="heading">Materi Pembelajaran</h1>
-
-   <div class="box-container">
-      <?php if (!empty($materi)) : ?>
-         <?php foreach ($materi as $m) : ?>
-            <div class="box">
-               <h3 class="title"><?= $m['title']; ?></h3>
-               <a href="<?= base_url('admin/materi/view/' . $m['id']); ?>" class="btn">Buka Materi</a>
-            </div>
-         <?php endforeach; ?>
-      <?php else : ?>
-         <p class="empty">Belum ada materi untuk mapel ini!</p>
-      <?php endif; ?>
+   
    </div>
 </section>
 
@@ -122,8 +228,6 @@
                     <a href="<?= base_url('admin/soal/edit/' . $row['id']); ?>" class="option-btn">update</a>
                     <button type="submit" class="delete-btn" onclick="return confirm('Hapus soal ini?');">delete</button>
                 </form>
-
-                <a href="<?= base_url('admin/soal/view/' . $row['id']); ?>" class="btn">Lihat Detail</a>
             </div>
         <?php endforeach; ?>
     </div>

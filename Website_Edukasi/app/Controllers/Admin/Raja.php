@@ -22,11 +22,9 @@ class Raja extends BaseController
 
         $mapelModel = new MapelModel();
 
-        // Ambil data mapel
-        $mapel = $mapelModel->where('id', $mapel_id)
-                           ->where('tutor_id', $tutor_id)
-                           ->first();
-
+        // PERBAIKAN: Hapus filter tutor_id agar semua mapel bisa dilihat
+        $mapel = $mapelModel->find($mapel_id); // ← Hanya cari berdasarkan ID saja
+        
         if (!$mapel) {
             return redirect()->to('/admin/mapel')->with('error', 'Kerajaan tidak ditemukan!');
         }
@@ -49,82 +47,82 @@ class Raja extends BaseController
         return view('admin/raja/index', $data);
     }
 
-public function create()
-{
-    $tutor_id = $this->request->getCookie('tutor_id');
-    if (!$tutor_id) {
-        return redirect()->to('/login');
-    }
+    public function create()
+    {
+        $tutor_id = $this->request->getCookie('tutor_id');
+        if (!$tutor_id) {
+            return redirect()->to('/login');
+        }
 
-    $mapelModel = new MapelModel();
-    
-    // Ambil semua mapel untuk dropdown
-    $mapelList = $mapelModel->where('tutor_id', $tutor_id)->findAll();
-
-    if (empty($mapelList)) {
-        return redirect()->to('/admin/mapel/create')->with('error', 'Buat mapel terlebih dahulu!');
-    }
-
-    $data = [
-        'title' => 'Tambah Raja Baru',
-        'mapelList' => $mapelList,
-        'profile' => $this->getProfile($tutor_id)
-    ];
-
-    return view('admin/raja/create', $data);
-}
-
-public function store()
-{
-    $tutor_id = $this->request->getCookie('tutor_id');
-    if (!$tutor_id) {
-        return redirect()->to('/login');
-    }
-
-    // Ambil mapel_id dari FORM POST (dropdown), bukan parameter URL
-    $mapel_id = $this->request->getPost('mapel_id');
-    
-    if (!$mapel_id) {
-        return redirect()->back()->withInput()->with('error', 'Pilih kerajaan terlebih dahulu!');
-    }
-
-    // Validasi
-    if (empty($this->request->getPost('nama')) || empty($this->request->getPost('cerita'))) {
-        return redirect()->back()->withInput()->with('error', 'Nama dan cerita harus diisi!');
-    }
-
-    // Handle file upload
-    $foto = $this->request->getFile('foto');
-    $fotoName = 'default.jpg';
-
-    if ($foto && $foto->isValid() && !$foto->hasMoved()) {
-        $fotoName = $foto->getRandomName();
-        $foto->move('uploaded_files/raja/', $fotoName);
-    }
-
-    // Gunakan Query Builder langsung
-    $db = \Config\Database::connect();
-    
-    $data = [
-        'mapel_id' => $mapel_id, // Dari form POST
-        'nama' => $this->request->getPost('nama'),
-        'cerita' => $this->request->getPost('cerita'),
-        'foto' => $fotoName,
-        'longitude' => $this->request->getPost('longitude') ?: null,
-        'latitude' => $this->request->getPost('latitude') ?: null,
-        'created_at' => date('Y-m-d H:i:s')
-    ];
-
-    try {
-        $db->table('raja')->insert($data);
+        $mapelModel = new MapelModel();
         
-        return redirect()->to('/admin/mapel/' . $mapel_id . '/raja')
-                         ->with('success', 'Raja berhasil ditambahkan!');
-                         
-    } catch (\Exception $e) {
-        return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data: ' . $e->getMessage());
+        // PERBAIKAN: Ambil semua mapel untuk dropdown (tidak filter tutor)
+        $mapelList = $mapelModel->findAll(); // ← Hapus where('tutor_id', $tutor_id)
+
+        if (empty($mapelList)) {
+            return redirect()->to('/admin/mapel/create')->with('error', 'Buat mapel terlebih dahulu!');
+        }
+
+        $data = [
+            'title' => 'Tambah Raja Baru',
+            'mapelList' => $mapelList,
+            'profile' => $this->getProfile($tutor_id)
+        ];
+
+        return view('admin/raja/create', $data);
     }
-}
+
+    public function store()
+    {
+        $tutor_id = $this->request->getCookie('tutor_id');
+        if (!$tutor_id) {
+            return redirect()->to('/login');
+        }
+
+        // Ambil mapel_id dari FORM POST (dropdown), bukan parameter URL
+        $mapel_id = $this->request->getPost('mapel_id');
+        
+        if (!$mapel_id) {
+            return redirect()->back()->withInput()->with('error', 'Pilih kerajaan terlebih dahulu!');
+        }
+
+        // Validasi
+        if (empty($this->request->getPost('nama')) || empty($this->request->getPost('cerita'))) {
+            return redirect()->back()->withInput()->with('error', 'Nama dan cerita harus diisi!');
+        }
+
+        // Handle file upload
+        $foto = $this->request->getFile('foto');
+        $fotoName = 'default.jpg';
+
+        if ($foto && $foto->isValid() && !$foto->hasMoved()) {
+            $fotoName = $foto->getRandomName();
+            $foto->move('uploaded_files/raja/', $fotoName);
+        }
+
+        // Gunakan Query Builder langsung
+        $db = \Config\Database::connect();
+        
+        $data = [
+            'mapel_id' => $mapel_id,
+            'nama' => $this->request->getPost('nama'),
+            'cerita' => $this->request->getPost('cerita'),
+            'foto' => $fotoName,
+            'longitude' => $this->request->getPost('longitude') ?: null,
+            'latitude' => $this->request->getPost('latitude') ?: null,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        try {
+            $db->table('raja')->insert($data);
+            
+            return redirect()->to('/admin/mapel/' . $mapel_id . '/raja')
+                             ->with('success', 'Raja berhasil ditambahkan!');
+                             
+        } catch (\Exception $e) {
+            return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data: ' . $e->getMessage());
+        }
+    }
 
     public function edit($id = null)
     {
@@ -141,14 +139,12 @@ public function store()
             return redirect()->back()->with('error', 'Raja tidak ditemukan!');
         }
 
-        // Cek apakah raja ini milik mapel yang dimiliki tutor
+        // PERBAIKAN: Hapus filter tutor_id untuk cek kepemilikan
         $mapelModel = new MapelModel();
-        $mapel = $mapelModel->where('id', $raja['mapel_id'])
-                           ->where('tutor_id', $tutor_id)
-                           ->first();
-
+        $mapel = $mapelModel->find($raja['mapel_id']); // ← Hapus filter tutor_id
+        
         if (!$mapel) {
-            return redirect()->to('/admin/mapel')->with('error', 'Akses ditolak!');
+            return redirect()->to('/admin/mapel')->with('error', 'Kerajaan tidak ditemukan!');
         }
 
         $data = [
@@ -176,14 +172,12 @@ public function store()
             return redirect()->back()->with('error', 'Raja tidak ditemukan!');
         }
 
-        // Cek kepemilikan
+        // PERBAIKAN: Hapus cek kepemilikan berdasarkan tutor
         $mapelModel = new MapelModel();
-        $mapel = $mapelModel->where('id', $raja['mapel_id'])
-                           ->where('tutor_id', $tutor_id)
-                           ->first();
-
+        $mapel = $mapelModel->find($raja['mapel_id']); // ← Hapus filter tutor_id
+        
         if (!$mapel) {
-            return redirect()->to('/admin/mapel')->with('error', 'Akses ditolak!');
+            return redirect()->to('/admin/mapel')->with('error', 'Kerajaan tidak ditemukan!');
         }
 
         // Handle file upload
@@ -237,14 +231,12 @@ public function store()
 
         $mapel_id = $raja['mapel_id'];
 
-        // Cek kepemilikan
+        // PERBAIKAN: Hapus cek kepemilikan berdasarkan tutor
         $mapelModel = new MapelModel();
-        $mapel = $mapelModel->where('id', $mapel_id)
-                           ->where('tutor_id', $tutor_id)
-                           ->first();
-
+        $mapel = $mapelModel->find($mapel_id); // ← Hapus filter tutor_id
+        
         if (!$mapel) {
-            return redirect()->to('/admin/mapel')->with('error', 'Akses ditolak!');
+            return redirect()->to('/admin/mapel')->with('error', 'Kerajaan tidak ditemukan!');
         }
 
         // Hapus foto jika bukan default

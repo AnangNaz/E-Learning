@@ -21,8 +21,8 @@ class UpdateMapel extends BaseController
 
         $profile = $tutorModel->find($tutor_id);
 
-        // Dapatkan data mapel berdasarkan id + tutor id
-        $mapel = $mapelModel->where(['id' => $id, 'tutor_id' => $tutor_id])->first();
+        // Hapus filter tutor_id - ambil semua data berdasarkan id saja
+        $mapel = $mapelModel->find($id); // ← Perubahan di sini
 
         if (!$mapel) {
             return redirect()->to('/admin/mapel')->with('error', 'Mapel tidak ditemukan!');
@@ -41,7 +41,9 @@ class UpdateMapel extends BaseController
 
         $mapelModel = new MapelModel();
 
-        $mapel = $mapelModel->where(['id' => $id, 'tutor_id' => $tutor_id])->first();
+        // Hapus filter tutor_id
+        $mapel = $mapelModel->find($id); // ← Perubahan di sini
+        
         if (!$mapel) {
             return redirect()->to('/admin/mapel')->with('error', 'Data tidak ditemukan!');
         }
@@ -60,7 +62,6 @@ class UpdateMapel extends BaseController
         $file = $this->request->getFile('foto_raja');
 
         if ($file && $file->isValid() && !$file->hasMoved()) {
-
             $newName = $file->getRandomName();
             $file->move(FCPATH . 'uploaded_files', $newName);
 

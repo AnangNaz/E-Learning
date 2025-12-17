@@ -106,4 +106,6 @@ $routes->get('peristiwa/edit/(:num)', 'Admin\Peristiwa::edit/$1');
 $routes->post('peristiwa/update/(:num)', 'Admin\Peristiwa::update/$1');
 $routes->post('peristiwa/delete/(:num)', 'Admin\Peristiwa::delete/$1');
 $routes->get('mapel/(:num)/peristiwa', 'Admin\Peristiwa::index/$1');
+// Routes.php - ubah POST ke GET
+$routes->get('peristiwa/delete/(:num)', 'Admin\Peristiwa::delete/$1');
 });

@@ -94,11 +94,6 @@ $logged_in = isset($profile) && !empty($profile);
       <a href="<?= base_url('admin/materi'); ?>">
          <i class="fas fa-file-alt"></i><span>Tambah Materi</span>
       </a>
-
-      <a href="<?= base_url('admin/tambah-peristiwa'); ?>">
-         <i class="fas fa-file-alt"></i><span>Tambah Peristiwa</span>
-      </a>
-
       <a href="<?= base_url('/logout'); ?>" onclick="return confirm('logout?');">
          <i class="fas fa-right-from-bracket"></i><span>Logout</span>
       </a>

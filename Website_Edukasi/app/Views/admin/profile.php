@@ -28,29 +28,30 @@
          <a href="<?= base_url('admin/update'); ?>" class="inline-btn">Update Profile</a>
       </div>
 
-      <div class="flex">
+<div class="flex">
+    <div class="box">
+        <span><?= $total_mapel; ?></span>
+        <p>Total Kerajaan</p>
+        <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat kerajaan</a>
+    </div>
 
-         <div class="box">
-            <span><?= $total_mapel; ?></span>
-            <p>Total Kerajaan</p>
-            <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat kerajaan</a>
-         </div>
+    <div class="box">
+        <span><?= $total_Raja; ?></span>
+        <p>Total Raja</p>
+        <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Raja</a>
+    </div>
+    <div class="box">
+        <span><?= $total_peristiwa; ?></span>
+        <p>Total Peristiwa</p>
+        <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Peristiwa</a>
+    </div>
 
-         <div class="box">
-            <span><?= $total_materi; ?></span>
-            <p>Total Materi / Video</p>
-            <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Materi</a>
-         </div>
-
-<div class="box">
-    <span><?= $total_Raja; ?></span>
-    <p>Total Raja</p>
-    <a href="<?= base_url('admin/mapel'); ?>" class="btn">Lihat Raja</a>
+    <div class="box">
+        <span><?= $total_soal; ?></span>
+        <p>Total Soal Quiz</p>
+        <a href="<?= base_url('admin/materi'); ?>" class="btn">Lihat Soal</a>
+    </div>
 </div>
-
-
-      </div>
-   </div>
 
 </section>
 

@@ -17,34 +17,38 @@
 
    <h1 class="heading">Dashboard</h1>
 
-   <div class="box-container">
+<div class="box-container">
+    <div class="box">
+        <h3>Welcome!</h3>
+        <p><?= esc($profile['name'] ?? '') ?></p>
+        <a href="<?= base_url('admin/profile') ?>" class="btn">View profile</a>
+    </div>
 
-      <div class="box">
-         <h3>Welcome!</h3>
-         <p><?= esc($profile['name'] ?? '') ?></p>
+    <div class="box">
+        <h3><?= $total_mapel ?></h3>
+        <p>Total Kerajaan</p>
+        <a href="<?= base_url('admin/mapel') ?>" class="btn">Lihat Kerajaan</a>
+    </div>
 
-         <a href="<?= base_url('admin/profile') ?>" class="btn">View profile</a>
-      </div>
+    <div class="box">
+        <h3><?= $total_raja ?></h3>
+        <p>Total Raja</p>
+        <a href="<?= base_url('admin/materi') ?>" class="btn">Lihat Raja</a>
+    </div>
 
-      <div class="box">
-         <h3><?= $total_contents ?></h3>
-         <p>Total Materi</p>
-         <a href="<?= base_url('admin/tambah-materi') ?>" class="btn">Tambah Materi</a>
-      </div>
 
-      <div class="box">
-         <h3><?= $total_mapel ?></h3>
-         <p>Total Kerajaan</p>
-         <a href="<?= base_url('admin/tambah-mapel') ?>" class="btn">Tambah Kerajaan</a>
-      </div>
+    <div class="box">
+        <h3><?= $total_peristiwa ?></h3>
+        <p>Total Peristiwa</p>
+        <a href="<?= base_url('admin/materi') ?>" class="btn">Lihat Peristiwa</a>
+    </div>
 
-      <div class="box">
-         <h3><?= $total_raja ?></h3>
-         <p>Total Raja</p>
-         <a href="<?= base_url('admin/mapel') ?>" class="btn">Lihat Raja</a>
-      </div>
-
-   </div>
+    <div class="box">
+        <h3><?= $total_soal ?></h3>
+        <p>Total Soal Quiz</p>
+        <a href="<?= base_url('admin/materi') ?>" class="btn">Lihat Soal</a>
+    </div>
+</div>
 
 </section>
 
